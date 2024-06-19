@@ -1,1 +1,73 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the range of therapeutic massage services offered by SLC Massage & Energy.">
+    <title>Services | SLC Massage & Energy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="#"><img src="images/logo.png" alt="SLC Massage & Energy Logo"></a></h1>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#memberships">Memberships</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#book-now" class="book-now small">Book Now</a></li>
+        </ul>
+    </header>
+
+
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service" id="swedish">
+                    <h3>Swedish Massage</h3>
+                    <p>Gentle, flowing strokes for relaxation and stress relief. This classic massage technique is perfect for first-time clients or those looking to unwind.</p>
+                    <p>60 min - $80 | 90 min - $120</p>
+                    <a href="#" class="book-now">Book Now</a>
+                </div>
+                <div class="service" id="prenatal">
+                    <h3>Prenatal Massage</h3>
+                    <p>Specialized care for expectant mothers, promoting comfort and well-being. Prenatal massage helps alleviate common pregnancy discomforts and provides a relaxing experience.</p>
+                    <p>60 min - $80 | 90 min - $120</p>
+                    <a href="#" class="book-now">Book Now</a>
+                </div>
+                <!-- Add more services as needed -->
+            </div>
+        </section>
+        <!-- Add Calendly widget at the bottom of the services page -->
+        <section id="book-now">
+            <h2>Book Your Service</h2>
+            <p>Choose the service that suits your needs and book your appointment today.</p>
+            <!-- Calendly inline widget -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-username" style="min-width:320px;height:630px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SLC Massage & Energy</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

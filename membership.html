@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the membership program at SLC Massage & Energy and enjoy exclusive benefits and discounts.">
+    <title>Memberships | SLC Massage & Energy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="#"><img src="images/logo.png" alt="SLC Massage & Energy Logo"></a></h1>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#memberships">Memberships</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#book-now" class="book-now small">Book Now</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="memberships">
+            <h2>Membership Benefits</h2>
+            <ul>
+                <li>10% off 60-minute sessions</li>
+                <li>15% off 90-minute sessions</li>
+                <li>Free birthday massage</li>
+                <li>Discounts on additional services</li>
+            </ul>
+            <a href="#" class="book-now">Join Now</a>
+        </section>
+        <!-- Add Square payment form for membership payments -->
+        <section id="membership-payment">
+            <h2>Join Our Membership Program</h2>
+            <p>Enjoy exclusive benefits and discounts with our membership program.</p>
+            <div id="payment-form-container"></div>
+            <script src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
+            <script>
+                const payments = Square.payments('YOUR_APPLICATION_ID', 'YOUR_LOCATION_ID');
+                const card = await payments.card();
+                await card.attach('#payment-form-container');
+
+                async function handlePayment() {
+                    const result = await card.tokenize();
+                    if (result.status === 'OK') {
+                        // Process the payment with the token
+                        // Replace the below with your payment processing logic
+                        alert('Payment successful!');
+                    } else {
+                        // Handle errors
+                        alert('Payment failed. Please try again.');
+                    }
+                }
+            </script>
+            <button onclick="handlePayment()" class="book-now">Pay Now</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SLC Massage & Energy</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+

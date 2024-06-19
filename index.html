@@ -3,44 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience the transformative power of therapeutic massage and energy work with SLC Massage & Energy. Book your appointment today!">
     <title>SLC Massage & Energy | Healing Touch. Renewed Energy.</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
-        <header>
-            <nav>
-                <h1><a href="#">SLC Massage & Energy</a></h1>
-                <div class="menu-toggle">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#membership">Membership</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="book-now">Book Now</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav>
+            <h1><a href="#"><img src="images/logo.png" alt="SLC Massage & Energy Logo"></a></h1>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#memberships">Memberships</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#book-now" class="book-now small">Book Now</a></li>
+        </ul>
+    </header>
 
     <main>
         <section id="hero">
-            <div class="hero-content">
-                <h2>Healing Touch. Renewed Energy.</h2>
-                <p>Experience the transformative power of therapeutic massage and energy work.</p>
-                <a href="#" class="book-now">Book Now</a>
+            <div class="parallax">
+                <div class="video-container">
+                    <video autoplay muted loop id="bg-video">
+                        <source src="images/spa-background.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="hero-content">
+                    <h2>Healing Touch. Renewed Energy.</h2>
+                    <p>Experience the transformative power of therapeutic massage and energy work.</p>
+                    <a href="#book-now" class="book-now">Book Now</a>
+                </div>
             </div>
         </section>
 
         <section id="about">
             <div class="about-content">
                 <h2>Meet Your Therapist</h2>
-                <p>[Your Partner's Name] is a dedicated massage therapist with a passion for holistic healing. Combining [her expertise], she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
+                <p>[Your Partner's Name] is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
                 <a href="about.html">Learn More</a>
             </div>
         </section>
@@ -60,7 +67,6 @@
                     <p>60 min - $80 | 90 min - $120</p>
                     <a href="services.html#prenatal" class="book-now">Learn More</a>
                 </div>
-                </div>
             </div>
         </section>
 
@@ -71,17 +77,42 @@
                 <li>15% off 90-minute sessions</li>
                 <li>Free birthday massage</li>
                 <li>Discounts on additional services</li>
-                </ul>
+            </ul>
             <a href="memberships.html" class="book-now">Join Now</a>
         </section>
 
         <section id="testimonials">
             <h2>Testimonials</h2>
+            <!-- Testimonials content -->
+        </section>
+
+        <section id="book-now">
+            <h2>Book Your Appointment</h2>
+            <p>Schedule your session easily with our online booking system.</p>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-username" style="min-width:320px;height:630px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            </section>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="book-now">Send Message</button>
+            </form>
+            <p>Phone: [Your Partner's Phone Number]</p>
+            <p>Email: [Your Partner's Email Address]</p>
+            <div id="social-media-links">
+                <!-- Social media links -->
+            </div>
+        </section>
     </main>
 
     <footer>
