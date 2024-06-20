@@ -255,6 +255,14 @@ section {
   margin: 0 auto;
 }
 
+.therapist-headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+}
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
