@@ -1,7 +1,8 @@
-// Toggle Mobile Menu
 function toggleMenu() {
-  const navMenu = document.querySelector(".nav-menu");
-  navMenu.classList.toggle("active");
+  const menu = document.querySelector(".nav-menu");
+  const overlay = document.querySelector(".menu-overlay");
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
 }
 
 // Smooth Scroll

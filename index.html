@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +12,13 @@
 <body>
     <header>
         <nav>
-            <h1><a href="#"><img src="images/logo.png" alt="SLC Massage & Energy Logo"></a></h1>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
         </nav>
+        <div class="menu-overlay" onclick="toggleMenu()"></div>
         <ul class="nav-menu">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -36,7 +37,9 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
+                <div id="particles-js"></div>
                 <div class="hero-content">
+                    <a href="#"><img src="images/slc-massage-energy-logo-white.svg" alt="SLC Massage & Energy Logo" class="hero-logo"></a>
                     <h2>Healing Touch. Renewed Energy.</h2>
                     <p>Experience the transformative power of therapeutic massage and energy work.</p>
                     <a href="#book-now" class="book-now">Book Now</a>
@@ -120,5 +123,51 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js',
+        {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
