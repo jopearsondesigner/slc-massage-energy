@@ -6,7 +6,8 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   color: #333;
   line-height: 1.6;
@@ -16,7 +17,8 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Montserrat", sans-serif; /* Elegant Header Font */
   text-align: center;
 }
 
@@ -111,7 +113,7 @@ nav h1 a img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
   right: -100%;
@@ -212,10 +214,10 @@ nav h1 a img {
   z-index: 1;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   background-color: rgba(0, 0, 0, 0);
+  max-width: auto;
   width: 100%;
-  max-width: 100%;
   margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
@@ -223,15 +225,17 @@ nav h1 a img {
 
 .hero-content h2 {
   font-size: 3em;
+  margin: 0;
 }
 
 .hero-content p {
   font-size: 1.25rem;
-  margin: 20px 0;
+  margin: 12px 0 20px 0;
 }
 
 .hero-logo {
   height: 230px;
+  margin-bottom: 20px;
 }
 
 #particles-js {
@@ -324,7 +328,8 @@ section {
 
 #contact-form button {
   display: block;
-  width: 100%;
+  width: auto;
+  margin: 0 auto;
 }
 
 footer {
