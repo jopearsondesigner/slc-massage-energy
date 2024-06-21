@@ -16,9 +16,13 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme">
+            </div>
         </nav>
         <div class="menu-overlay" onclick="toggleMenu()"></div>
         <ul class="nav-menu">
+            <li><a href="/">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#memberships">Memberships</a></li>
@@ -26,7 +30,6 @@
             <li><a href="#book-now" class="book-now small">Book Now</a></li>
         </ul>
     </header>
-
     <main>
         <section id="hero">
             <div class="parallax">
@@ -50,7 +53,8 @@
             <div class="about-content">
                 <h2>Meet Your Therapist</h2>
                 <img src="images/sunny-headshot-1.png" alt="Therapist Headshot" class="therapist-headshot">
-                <p>[Your Partner's Name] is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
+                <p>Sunny Roundy is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
+
                 <a href="about.html">Learn More</a>
             </div>
         </section>
@@ -58,36 +62,97 @@
         <section id="services">
             <h2>Our Services</h2>
             <div class="service-grid">
-                <div class="service">
-                    <h3>Swedish Massage</h3>
-                    <p>Gentle, flowing strokes for relaxation and stress relief.</p>
-                    <p>60 min - $80 | 90 min - $120</p>
-                    <a href="services.html#swedish" >Learn More</a>
-                </div>
-                <div class="service">
-                    <h3>Prenatal Massage</h3>
-                    <p>Specialized care for expectant mothers, promoting comfort and well-being.</p>
-                    <p>60 min - $80 | 90 min - $120</p>
-                    <a href="services.html#prenatal" >Learn More</a>
-                </div>
+              <div class="service">
+                <h3>Swedish Massage</h3>
+                <p>Gentle, flowing strokes for relaxation and stress relief.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Prenatal Massage</h3>
+                <p>Specialized care for expectant mothers, promoting comfort and well-being.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Trigger Point</h3>
+                <p>Focused pressure on specific points to relieve muscle tension and pain.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Chair Massage</h3>
+                <p>Quick, convenient massage for relaxation and stress relief.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Russian Massage</h3>
+                <p>Unique techniques to improve circulation and reduce muscle tension.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Shiatsu</h3>
+                <p>Japanese technique using finger pressure to improve energy flow.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Thai Massage</h3>
+                <p>Combination of acupressure and assisted yoga postures.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Lymphatic Drainage</h3>
+                <p>Gentle technique to stimulate the lymphatic system and reduce swelling.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Sports Massage</h3>
+                <p>Targeted techniques to improve athletic performance and recovery.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Reflexology</h3>
+                <p>Application of pressure to specific points on the feet to improve health.</p>
+                <p>60 minutes - $80<br>90 minutes - $120</p>
+              </div>
+              <div class="service">
+                <h3>Deep Tissue Massage</h3>
+                <p>Intense massage focusing on deeper layers of muscle tissue.</p>
+                <p>60 minutes - $95<br>90 minutes - $135</p>
+              </div>
             </div>
-        </section>
+          </section>
 
-        <section id="memberships">
+          <section id="memberships">
             <h2>Membership Benefits</h2>
-            <ul>
-                <li>10% off 60-minute sessions</li>
-                <li>15% off 90-minute sessions</li>
-                <li>Free birthday massage</li>
-                <li>Discounts on additional services</li>
-            </ul>
-            <a href="memberships.html" class="book-now">Join Now</a>
-        </section>
+            <div class="membership-benefits">
+              <p>10% off 60-minute sessions</p>
+              <p>15% off 90-minute sessions</p>
+              <p>Free birthday massage</p>
+              <p>Shareable with a friend</p>
+              <p>Discounts on additional services</p>
+            </div>
+            <a href="#" class="book-now">Join Now</a>
+          </section>
 
-        <section id="testimonials">
-            <h2>Testimonials</h2>
-            <!-- Testimonials content -->
-        </section>
+          <section id="testimonials">
+            <div class="testimonials-background">
+            <!-- Add this within the #testimonials div in your existing index.html -->
+            <div class="gallery">
+                <img src="images/testimonial1.jpg" alt="Client Testimonial">
+                <img src="images/testimonial2.jpg" alt="Client Testimonial">
+                <img src="images/testimonial3.jpg" alt="Client Testimonial">
+                <!-- Add more images as needed -->
+            </div>
+              <img src="https://via.placeholder.com/1500x800" alt="Testimonials Background" class="background-image">
+              <div class="testimonials-content">
+                <h2>Testimonials</h2>
+                <div class="testimonial-item">
+                  <p>"The best massage therapy I've ever experienced. Truly transformative!"</p>
+                  <p class="author">- Jane Doe</p>
+                </div>
+                <!-- Add more testimonials as needed -->
+              </div>
+            </div>
+          </section>
+
 
         <section id="book-now">
             <h2>Book Your Appointment</h2>

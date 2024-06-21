@@ -1,23 +1,42 @@
-/* style.css */
-
 /* General Styles */
 html {
   font-size: 16px; /* Set the base font size to 16px */
 }
 
 body {
-  /* font-family: "Lato", sans-serif; */
   font-family: "Open Sans", sans-serif;
   margin: 0;
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
+  background-color: #fff;
+}
+
+body.dark-mode {
+  color: #f0f0f0;
+  background-color: #121212; /* Dark blue background */
+}
+
+a {
+  color: #d4af37; /* Gold */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b8860b; /* Darker gold */
+}
+
+body.dark-mode a {
+  color: #ffd700; /* Gold for dark mode */
+}
+
+body.dark-mode a:hover {
+  color: #ffc700; /* Brighter gold */
 }
 
 h1,
 h2,
 h3 {
-  /* font-family: "Playfair Display", serif; */
   font-family: "Montserrat", sans-serif; /* Elegant Header Font */
   text-align: center;
 }
@@ -29,7 +48,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -37,6 +56,7 @@ h2 {
 h3 {
   font-size: 1.5rem;
   font-weight: 400;
+  font-weight: 600;
 }
 
 p {
@@ -44,13 +64,14 @@ p {
   margin: 1rem 0;
 }
 
-a {
-  color: #d4af37; /* Gold */
-  text-decoration: none;
-}
-
-a:hover {
-  color: #b8860b; /* Darker gold */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode .service h3,
+body.dark-mode .service p,
+body.dark-mode #contact-form label {
+  color: #f0f0f0;
 }
 
 /* Header Styles */
@@ -74,26 +95,17 @@ nav {
   width: 100%;
 }
 
-nav h1 a img {
-  height: 50px; /* Adjust based on logo size */
-}
-
 .menu-toggle {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 25px;
-  position: fixed; /* Fix it to the top-right corner */
-  top: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  z-index: 1001; /* Ensure it is above other content */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.3
-  ); /* Semi-transparent background for contrast */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
   border-radius: 5px;
 }
@@ -101,8 +113,31 @@ nav h1 a img {
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #fff; /* White color for better visibility */
+  background-color: #fff;
   margin: 4px 0;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 69px;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 14px;
+  border-radius: 5px;
+}
+
+.theme-toggle img {
+  width: 18px;
+  height: 18px;
+  filter: invert(0);
+}
+
+body.dark-mode .theme-toggle img {
+  filter: invert(1);
 }
 
 .nav-menu {
@@ -145,7 +180,7 @@ nav h1 a img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999; /* Ensure it is above other content */
+  z-index: 999;
 }
 
 .menu-overlay.active {
@@ -165,8 +200,9 @@ nav h1 a img {
   transition: transform 0.2s ease, background 0.2s ease;
   text-transform: uppercase;
   cursor: pointer;
-  font-weight: bold; /* Make the font bold for better readability */
-  font-size: 16px; /* Increase font size for better readability */
+  font-weight: bold;
+  font-size: 16px;
+  margin: 32px 0 16px;
 }
 
 .book-now:hover {
@@ -179,9 +215,20 @@ nav h1 a img {
   font-size: 12px !important;
 }
 
+body.dark-mode .service {
+  background-color: #333333; /* Dark mode service card color */
+  border: 1px solid #555;
+}
+
+body.dark-mode footer {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
 /* Hero Section Styles */
 #hero {
   padding: 0;
+  position: relative;
 }
 
 .parallax {
@@ -207,6 +254,7 @@ nav h1 a img {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1; /* Ensure the video is behind other content */
 }
 
 .hero-content {
@@ -226,6 +274,7 @@ nav h1 a img {
 .hero-content h2 {
   font-size: 3em;
   margin: 0;
+  font-weight: 400;
 }
 
 .hero-content p {
@@ -247,21 +296,63 @@ nav h1 a img {
   left: 0;
 }
 
+body.dark-mode #particles-js {
+  background-color: transparent; /* Ensure particles background is transparent */
+}
+
 /* Section Styles */
 section {
   padding: 50px 20px;
   text-align: center;
 }
 
-.about-content,
-.service-grid {
-  max-width: 800px;
-  margin: 0 auto;
+section:nth-of-type(odd) {
+  background-color: #f9f9f9; /* Light gray background for odd sections */
+}
+
+section:nth-of-type(even) {
+  background-color: #ffffff; /* White background for even sections */
+}
+
+body.dark-mode section:nth-of-type(odd) {
+  background-color: #1f1f1f; /* Darker background for odd sections in dark mode */
+}
+
+body.dark-mode section:nth-of-type(even) {
+  background-color: #2b2b2b; /* Lighter background for even sections in dark mode */
+}
+
+body.dark-mode #hero,
+body #hero {
+  background-color: transparent; /* Keep the hero section background transparent in dark mode */
+}
+
+/* Add this to your existing style.css */
+#about {
+  position: relative;
+  background: url("images/about-bg.jpg") no-repeat center center/cover;
+  color: #fff;
+}
+
+#about .about-content {
+  position: relative;
+  z-index: 2;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .therapist-headshot {
-  width: 150px;
-  height: 150px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
   margin: 20px auto;
   display: block;
@@ -279,6 +370,12 @@ section {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .service h3 {
@@ -299,9 +396,14 @@ section {
   text-align: left;
 }
 
-.memberships ul li {
-  margin-bottom: 10px;
+.membership-benefits p {
   font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+body.dark-mode .membership-benefits p {
+  color: #f0f0f0;
 }
 
 #contact-form {
@@ -324,6 +426,13 @@ section {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+  background-color: #333333;
+  color: #f0f0f0;
+  border: 1px solid #555;
 }
 
 #contact-form button {
@@ -411,6 +520,11 @@ footer {
     padding: 8px 16px;
     font-size: 14px;
   }
+
+  .therapist-headshot {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -441,6 +555,11 @@ footer {
 
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .therapist-headshot {
+    width: 160px;
+    height: 160px;
   }
 }
 
@@ -487,18 +606,6 @@ footer {
 
 /* Additional styles for small devices */
 @media (max-width: 576px) {
-  /* .hero-content {
-    padding: 10px;
-  }
-
-  .hero-content h2 {
-    font-size: 1.25em;
-  }
-
-  .hero-content p {
-    font-size: 0.8rem;
-  } */
-
   .book-now {
     padding: 5px 10px;
     font-size: 10px;
@@ -551,6 +658,15 @@ footer {
   padding: 50px 20px;
 }
 
+body.dark-mode #testimonials {
+  background-color: #121212;
+}
+
+body.dark-mode .testimonial {
+  background-color: #333333;
+  border: 1px solid #555;
+}
+
 #testimonials h2 {
   margin-bottom: 30px;
 }
@@ -572,6 +688,26 @@ footer {
   margin-top: 10px;
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+/* Add this to your existing style.css */
+#testimonials .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#testimonials .gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+#testimonials .gallery img:hover {
+  transform: scale(1.05);
 }
 
 /* Additional footer styles */
