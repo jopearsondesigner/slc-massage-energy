@@ -1,4 +1,5 @@
 /* General Styles */
+/* Font size, family, margins, color adjustments */
 html {
   font-size: 18px; /* Set the base font size to 18px */
 }
@@ -17,6 +18,7 @@ body.dark-mode {
   background-color: #121212;
 }
 
+/* Anchor tag styles */
 a {
   color: #d4af37; /* Gold */
   text-decoration: none;
@@ -34,6 +36,7 @@ body.dark-mode a:hover {
   color: #ffc700; /* Brighter gold */
 }
 
+/* Typography styles for headings and paragraphs */
 h1,
 h2,
 h3 {
@@ -95,6 +98,7 @@ nav {
   width: 100%;
 }
 
+/* Menu and Theme Toggle Button Styles */
 .menu-toggle {
   cursor: pointer;
   display: flex;
@@ -140,6 +144,7 @@ body.dark-mode .theme-toggle img {
   filter: invert(1);
 }
 
+/* Navigation Menu Styles */
 .nav-menu {
   list-style: none;
   margin: 0;
@@ -172,6 +177,7 @@ body.dark-mode .theme-toggle img {
   transition: color 0.3s ease;
 }
 
+/* Overlay Styles for Menu */
 .menu-overlay {
   display: none;
   position: fixed;
@@ -187,6 +193,7 @@ body.dark-mode .theme-toggle img {
   display: block;
 }
 
+/* Book Now Button Styles */
 .book-now {
   display: inline-block;
   background: linear-gradient(to top, #b8860b, #ffd700, #ffeea4);

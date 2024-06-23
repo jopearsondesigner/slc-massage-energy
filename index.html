@@ -5,180 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Experience the transformative power of therapeutic massage and energy work with SLC Massage & Energy. Book your appointment today!">
     <title>SLC Massage & Energy | Healing Touch. Renewed Energy.</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
+        html { font-size: 18px; }
+        body { font-family: 'Lato', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+<body class="dark:bg-gray-900 dark:text-gray-200 text-gray-800 overflow-x-hidden">
+    <header class="fixed w-full top-0 left-0 flex justify-between items-center p-4 z-50 bg-transparent">
+        <nav class="flex justify-between items-center w-full">
+            <div class="menu-toggle cursor-pointer flex flex-col justify-between h-6 fixed top-5 right-5 z-50 bg-gray-800 p-2 rounded" onclick="toggleMenu()">
+                <div class="bar bg-white w-6 h-0.5 mb-1"></div>
+                <div class="bar bg-white w-6 h-0.5 mb-1"></div>
+                <div class="bar bg-white w-6 h-0.5"></div>
             </div>
-            <div class="theme-toggle" onclick="toggleTheme()">
-                <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme">
+            <div class="theme-toggle cursor-pointer flex items-center fixed top-5 right-20 z-50 bg-gray-800 p-3 rounded" onclick="toggleTheme()">
+                <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme" class="w-4 h-4">
             </div>
         </nav>
-        <div class="menu-overlay" onclick="toggleMenu()"></div>
-        <ul class="nav-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#memberships">Memberships</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#book-now" class="book-now small">Book Now</a></li>
+        <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50" onclick="toggleMenu()"></div>
+        <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-black bg-opacity-90 flex flex-col justify-center items-center transition-right duration-300">
+            <li class="my-5"><a href="/" class="text-white">Home</a></li>
+            <li class="my-5"><a href="#about" class="text-white">About</a></li>
+            <li class="my-5"><a href="#services" class="text-white">Services</a></li>
+            <li class="my-5"><a href="#memberships" class="text-white">Memberships</a></li>
+            <li class="my-5"><a href="#contact" class="text-white">Contact</a></li>
+            <li class="my-5"><a href="#book-now" class="book-now small text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-4 py-2 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a></li>
         </ul>
     </header>
     <main>
-        <section id="hero">
-            <div class="parallax">
-                <div class="video-container">
-                    <video autoplay muted loop playsinline id="bg-video" poster="images/fallback.jpg">
+        <section id="hero" class="relative">
+            <div class="parallax relative h-screen overflow-hidden">
+                <div class="video-container absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+                    <video autoplay muted loop playsinline id="bg-video" poster="images/fallback.jpg" class="absolute top-0 left-0 w-full h-full object-cover -z-10">
                         <source src="images/spa-background.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div id="particles-js"></div>
-                <div class="hero-content">
-                    <a href="#"><img src="images/slc-massage-energy-logo-white.svg" alt="SLC Massage & Energy Logo" class="hero-logo"></a>
-                    <h2>Healing Touch. Renewed Energy.</h2>
-                    <p>Experience the transformative power of therapeutic massage and energy work.</p>
-                    <a href="#book-now" class="book-now">Book Now</a>
+                <div id="particles-js" class="absolute inset-0 -z-10"></div>
+                <div class="hero-content relative text-center text-white py-5 max-w-4xl mx-auto top-1/2 transform -translate-y-1/2">
+                    <a href="#"><img src="images/slc-massage-energy-logo-white.svg" alt="SLC Massage & Energy Logo" class="hero-logo h-48 mb-5 mx-auto"></a>
+                    <h2 class="text-5xl font-playfair font-light">Healing Touch. Renewed Energy.</h2>
+                    <p class="text-xl mt-3 mb-5">Experience the transformative power of therapeutic massage and energy work.</p>
+                    <a href="#book-now" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a>
                 </div>
             </div>
         </section>
 
-        <section id="about">
-            <div class="about-content">
-                <h2>Meet Your Therapist</h2>
-                <img src="images/sunny-headshot-1.png" alt="Therapist Headshot" class="therapist-headshot">
-                <p>Sunny Roundy is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
-
-                <a href="about.html">Learn More</a>
+        <section id="about" class="py-12 text-center">
+            <div class="about-content max-w-3xl mx-auto">
+                <h2 class="text-3xl font-playfair font-semibold mb-5">Meet Your Therapist</h2>
+                <img src="images/sunny-headshot-1.png" alt="Therapist Headshot" class="therapist-headshot w-64 h-64 rounded-full mx-auto mb-5">
+                <p class="text-lg mb-5">Sunny Roundy is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
+                <a href="about.html" class="text-yellow-600 hover:text-yellow-700">Learn More</a>
             </div>
         </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-              <div class="service">
-                <h3>Swedish Massage</h3>
-                <p>Gentle, flowing strokes for relaxation and stress relief.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+        <section id="services" class="py-12 text-center bg-gray-100 dark:bg-gray-800">
+            <h2 class="text-3xl font-playfair font-semibold mb-5">Our Services</h2>
+            <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Swedish Massage</h3>
+                <p class="mb-2">Gentle, flowing strokes for relaxation and stress relief.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Prenatal Massage</h3>
-                <p>Specialized care for expectant mothers, promoting comfort and well-being.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Prenatal Massage</h3>
+                <p class="mb-2">Specialized care for expectant mothers, promoting comfort and well-being.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Trigger Point</h3>
-                <p>Focused pressure on specific points to relieve muscle tension and pain.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Trigger Point</h3>
+                <p class="mb-2">Focused pressure on specific points to relieve muscle tension and pain.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Chair Massage</h3>
-                <p>Quick, convenient massage for relaxation and stress relief.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Chair Massage</h3>
+                <p class="mb-2">Quick, convenient massage for relaxation and stress relief.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Russian Massage</h3>
-                <p>Unique techniques to improve circulation and reduce muscle tension.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Russian Massage</h3>
+                <p class="mb-2">Unique techniques to improve circulation and reduce muscle tension.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Shiatsu</h3>
-                <p>Japanese technique using finger pressure to improve energy flow.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Shiatsu</h3>
+                <p class="mb-2">Japanese technique using finger pressure to improve energy flow.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Thai Massage</h3>
-                <p>Combination of acupressure and assisted yoga postures.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Thai Massage</h3>
+                <p class="mb-2">Combination of acupressure and assisted yoga postures.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Lymphatic Drainage</h3>
-                <p>Gentle technique to stimulate the lymphatic system and reduce swelling.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Lymphatic Drainage</h3>
+                <p class="mb-2">Gentle technique to stimulate the lymphatic system and reduce swelling.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Sports Massage</h3>
-                <p>Targeted techniques to improve athletic performance and recovery.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Sports Massage</h3>
+                <p class="mb-2">Targeted techniques to improve athletic performance and recovery.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Reflexology</h3>
-                <p>Application of pressure to specific points on the feet to improve health.</p>
-                <p>60 minutes - $80<br>90 minutes - $120</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Reflexology</h3>
+                <p class="mb-2">Application of pressure to specific points on the feet to improve health.</p>
+                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
               </div>
-              <div class="service">
-                <h3>Deep Tissue Massage</h3>
-                <p>Intense massage focusing on deeper layers of muscle tissue.</p>
-                <p>60 minutes - $95<br>90 minutes - $135</p>
+              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+                <h3 class="text-2xl font-playfair mb-2">Deep Tissue Massage</h3>
+                <p class="mb-2">Intense massage focusing on deeper layers of muscle tissue.</p>
+                <p class="text-lg">60 minutes - $95<br>90 minutes - $135</p>
               </div>
             </div>
           </section>
 
-          <section id="memberships">
-            <h2>Membership Benefits</h2>
-            <div class="membership-benefits">
-              <p>10% off 60-minute sessions</p>
-              <p>15% off 90-minute sessions</p>
-              <p>Free birthday massage</p>
-              <p>Shareable with a friend</p>
-              <p>Discounts on additional services</p>
+          <section id="memberships" class="py-12 text-center bg-white dark:bg-gray-900">
+            <h2 class="text-3xl font-playfair font-semibold mb-5">Membership Benefits</h2>
+            <div class="membership-benefits max-w-md mx-auto text-left text-lg text-gray-800 dark:text-gray-200">
+              <p class="mb-2">10% off 60-minute sessions</p>
+              <p class="mb-2">15% off 90-minute sessions</p>
+              <p class="mb-2">Free birthday massage</p>
+              <p class="mb-2">Shareable with a friend</p>
+              <p class="mb-2">Discounts on additional services</p>
             </div>
-            <a href="#" class="book-now">Join Now</a>
+            <a href="#" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5 mt-5">Join Now</a>
           </section>
 
-          <section id="testimonials">
-            <div class="testimonials-background">
-
-              <img src="https://via.placeholder.com/1500x800" alt="Testimonials Background" class="background-image">
-              <div class="testimonials-content">
-                <h2>Testimonials</h2>
-                <div class="testimonial-item">
-                  <p>"The best massage therapy I've ever experienced. Truly transformative!"</p>
-                  <p class="author">- Jane Doe</p>
+          <section id="testimonials" class="py-12 text-center bg-gray-100 dark:bg-gray-800">
+            <div class="testimonials-background relative">
+              <img src="https://via.placeholder.com/1500x800" alt="Testimonials Background" class="background-image absolute inset-0 w-full h-full object-cover opacity-20">
+              <div class="testimonials-content relative z-10">
+                <h2 class="text-3xl font-playfair font-semibold mb-5">Testimonials</h2>
+                <div class="testimonial-item bg-white dark:bg-gray-700 p-5 rounded-lg shadow mb-5">
+                  <p class="text-lg">"The best massage therapy I've ever experienced. Truly transformative!"</p>
+                  <p class="author font-bold text-sm mt-2">- Jane Doe</p>
                 </div>
                 <!-- Add more testimonials as needed -->
               </div>
             </div>
           </section>
 
-
-        <section id="book-now">
-            <h2>Book Your Appointment</h2>
-            <p>Schedule your session easily with our online booking system.</p>
+        <section id="book-now" class="py-12 text-center">
+            <h2 class="text-3xl font-playfair font-semibold mb-5">Book Your Appointment</h2>
+            <p class="text-lg mb-5">Schedule your session easily with our online booking system.</p>
             <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-username" style="min-width:320px;height:630px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <section id="contact" class="py-12 text-center bg-gray-100 dark:bg-gray-800">
+            <h2 class="text-3xl font-playfair font-semibold mb-5">Contact Us</h2>
+            <form id="contact-form" class="max-w-xl mx-auto text-left">
+                <label for="name" class="block text-lg mb-1">Name:</label>
+                <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email" class="block text-lg mb-1">Email:</label>
+                <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <label for="message" class="block text-lg mb-1">Message:</label>
+                <textarea id="message" name="message" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500"></textarea>
 
-                <button type="submit" class="book-now">Send Message</button>
+                <button type="submit" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Send Message</button>
             </form>
-            <p>Phone: [Your Partner's Phone Number]</p>
-            <p>Email: [Your Partner's Email Address]</p>
-            <div id="social-media-links">
+            <p class="text-lg mt-5">Phone: [Your Partner's Phone Number]</p>
+            <p class="text-lg">Email: [Your Partner's Email Address]</p>
+            <div id="social-media-links" class="flex justify-center gap-5 mt-5">
                 <!-- Social media links -->
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 SLC Massage & Energy</p>
+    <footer class="bg-black text-white p-5 text-center">
+        <p class="text-sm">&copy; 2024 SLC Massage & Energy</p>
     </footer>
 
     <script src="script.js"></script>
