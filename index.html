@@ -16,27 +16,36 @@
     </style>
 </head>
 <body class="dark:bg-gray-900 dark:text-gray-200 text-gray-800 overflow-x-hidden">
-    <header class="fixed w-full top-0 left-0 flex justify-between items-center p-4 z-50 bg-transparent">
-        <nav class="flex justify-between items-center w-full">
-            <div class="menu-toggle cursor-pointer flex flex-col justify-between h-6 fixed top-5 right-5 z-50 bg-gray-800 p-2 rounded" onclick="toggleMenu()">
-                <div class="bar bg-white w-6 h-0.5 mb-1"></div>
-                <div class="bar bg-white w-6 h-0.5 mb-1"></div>
-                <div class="bar bg-white w-6 h-0.5"></div>
-            </div>
-            <div class="theme-toggle cursor-pointer flex items-center fixed top-5 right-20 z-50 bg-gray-800 p-3 rounded" onclick="toggleTheme()">
-                <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme" class="w-4 h-4">
-            </div>
-        </nav>
-        <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50" onclick="toggleMenu()"></div>
-        <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-black bg-opacity-90 flex flex-col justify-center items-center transition-right duration-300">
-            <li class="my-5"><a href="/" class="text-white">Home</a></li>
-            <li class="my-5"><a href="#about" class="text-white">About</a></li>
-            <li class="my-5"><a href="#services" class="text-white">Services</a></li>
-            <li class="my-5"><a href="#memberships" class="text-white">Memberships</a></li>
-            <li class="my-5"><a href="#contact" class="text-white">Contact</a></li>
-            <li class="my-5"><a href="#book-now" class="book-now small text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-4 py-2 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a></li>
-        </ul>
-    </header>
+  <header class="fixed w-full top-0 left-0 flex justify-between items-center p-4 z-50 bg-transparent">
+    <nav class="flex flex-col items-start fixed top-5 right-5 z-50">
+      <div class="menu-toggle cursor-pointer mb-4 p-[10px] rounded" onclick="toggleMenu()">
+          <div class="bar bg-white w-6 h-0.5 mb-1"></div>
+          <div class="bar bg-white w-6 h-0.5 mb-1"></div>
+          <div class="bar bg-white w-6 h-0.5"></div>
+      </div>
+      <hr class="w-full border-white mb-4 opacity-50">
+      <div class="theme-toggle cursor-pointer flex p-3 rounded" onclick="toggleTheme()">
+          <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme" class="w-4 h-4">
+      </div>
+      <hr class="w-full border-white mb-4 opacity-50">
+      <div class="social-media flex flex-col items-start gap-2">
+          <a href="https://www.facebook.com" class="text-white">Facebook</a>
+          <a href="https://www.instagram.com" class="text-white">Instagram</a>
+          <a href="https://www.twitter.com" class="text-white">Twitter</a>
+      </div>
+  </nav>
+
+  <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50" onclick="toggleMenu()"></div>
+  <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-black bg-opacity-90 flex flex-col justify-center items-center transition-all duration-300">
+      <li class="my-5"><a href="/" class="text-white">Home</a></li>
+      <li class="my-5"><a href="#about" class="text-white">About</a></li>
+      <li class="my-5"><a href="#services" class="text-white">Services</a></li>
+      <li class="my-5"><a href="#memberships" class="text-white">Memberships</a></li>
+      <li class="my-5"><a href="#contact" class="text-white">Contact</a></li>
+      <li class="my-5"><a href="#book-now" class="book-now small text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-4 py-2 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a></li>
+  </ul>
+</header>
+
     <main>
         <section id="hero" class="relative">
             <div class="parallax relative h-screen overflow-hidden">
