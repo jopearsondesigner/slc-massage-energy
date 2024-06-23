@@ -1,0 +1,698 @@
+/* General Styles */
+
+html {
+  font-size: 18px;
+  /* Set the base font size to 18px */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  color: #333;
+  line-height: 1.8;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+body.dark-mode {
+  color: #f0f0f0;
+  background-color: #121212;
+}
+
+a {
+  color: #d4af37;
+  /* Gold */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b8860b;
+  /* Darker gold */
+}
+
+body.dark-mode a {
+  color: #ffd700;
+  /* Gold for dark mode */
+}
+
+body.dark-mode a:hover {
+  color: #ffc700;
+  /* Brighter gold */
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  /* Elegant Header Font */
+  text-align: center;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.125rem;
+  margin: 1.25rem 0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode .service h3,
+body.dark-mode .service p,
+body.dark-mode #contact-form label {
+  color: #f0f0f0;
+}
+
+/* Header Styles */
+
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  background: transparent;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 69px;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 14px;
+  border-radius: 5px;
+}
+
+.theme-toggle img {
+  width: 18px;
+  height: 18px;
+  filter: invert(0);
+}
+
+body.dark-mode .theme-toggle img {
+  filter: invert(1);
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 250px;
+  transition: right 0.3s ease;
+}
+
+.nav-menu.active {
+  right: 0;
+}
+
+.nav-menu li {
+  margin: 20px 0;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+.book-now {
+  display: inline-block;
+  background: linear-gradient(to top, #b8860b, #ffd700, #ffeea4);
+  color: #fff !important;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 32px 0 16px;
+}
+
+.book-now:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to top, #b8860b, #e6b800, #ffd700);
+}
+
+.book-now.small {
+  padding: 8px 16px !important;
+  font-size: 0.875rem !important;
+}
+
+body.dark-mode .service {
+  background-color: #333333;
+  border: 1px solid #555;
+}
+
+body.dark-mode footer {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Hero Section Styles */
+
+#hero {
+  padding: 0;
+  position: relative;
+}
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0);
+  max-width: 80%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content h2 {
+  font-size: 3.25em;
+  margin: 0;
+  font-weight: 400;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 12px 0 20px 0;
+}
+
+.hero-logo {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+body.dark-mode #particles-js {
+  background-color: transparent;
+}
+
+/* Section Styles */
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+section:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+body.dark-mode section:nth-of-type(odd) {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode section:nth-of-type(even) {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode #hero,
+body #hero {
+  background-color: transparent;
+}
+
+.about-content,
+.service-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.therapist-headshot {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  font-size: 1.75rem;
+}
+
+.service p {
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+}
+
+.memberships ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.membership-benefits p {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+body.dark-mode .membership-benefits p {
+  color: #f0f0f0;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.125rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.125rem;
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+  background-color: #333333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+#contact-form button {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.75em;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+
+  .hero-logo {
+    height: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5em;
+  }
+
+  .hero-content p {
+    font-size: 1.125rem;
+  }
+
+  .hero-logo {
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.25em;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-logo {
+    height: 140px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .book-now {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+
+  .therapist-headshot {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 0px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-content h2 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 0.875rem;
+  }
+
+  .hero-logo {
+    height: 120px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .therapist-headshot {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Responsive styles for contact form */
+
+@media (max-width: 768px) {
+  #contact-form {
+    padding: 0 20px;
+  }
+
+  #contact-form button {
+    font-size: 14px;
+  }
+}
+
+/* Responsive styles for membership section */
+
+@media (max-width: 768px) {
+  .memberships ul {
+    padding: 0 20px;
+  }
+
+  .memberships ul li {
+    font-size: 14px;
+  }
+}
+
+/* Responsive styles for services section */
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service {
+    margin-bottom: 20px;
+  }
+
+  .service h3 {
+    font-size: 1.5rem;
+  }
+
+  .service p {
+    font-size: 1rem;
+  }
+}
+
+/* Additional styles for small devices */
+
+@media (max-width: 576px) {
+  .book-now {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  #contact-form label {
+    font-size: 0.875rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 0.875rem;
+  }
+
+  #contact-form button {
+    font-size: 12px;
+  }
+
+  .memberships ul li {
+    font-size: 0.875rem;
+  }
+}
+
+/* Hover effects for navigation links */
+
+.nav-menu a:hover {
+  color: #ffd700;
+}
+
+/* Style for social media links */
+
+#social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#social-media-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+#social-media-links a:hover {
+  color: #ffd700;
+}
+
+/* Additional styles for testimonials section */
+
+#testimonials {
+  background-color: #f8f8f8;
+  padding: 50px 20px;
+}
+
+body.dark-mode #testimonials {
+  background-color: #121212;
+}
+
+body.dark-mode .testimonial {
+  background-color: #333333;
+  border: 1px solid #555;
+}
+
+#testimonials h2 {
+  margin-bottom: 30px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.testimonial .author {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+/* Additional footer styles */
+
+footer {
+  background-color: #222;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
