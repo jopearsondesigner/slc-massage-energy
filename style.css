@@ -28,12 +28,12 @@ a:hover {
   color: #b8860b; /* Darker gold */
 }
 
-body.dark-mode a {
-  color: #ffd700; /* Gold for dark mode */
+body.dark-mode a:hover {
+  color: #ffe98d; /* Gold for dark mode */
 }
 
 body.dark-mode a:hover {
-  color: #ffc700; /* Brighter gold */
+  color: #ffd700; /* Brighter gold */
 }
 
 /* Typography styles for headings and paragraphs */
@@ -77,18 +77,42 @@ body.dark-mode #contact-form label {
   color: #f0f0f0;
 }
 
-/* Header Styles */
+/* Responsive Header Styles */
 header {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  z-index: 1000;
-  background: transparent;
+  padding: 0px;
+}
+
+.nav-menu.active {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    width: 75%;
+  }
+
+  header .logo img {
+    height: 40px;
+  }
+
+  header .menu-toggle .bar {
+    width: 20px;
+    height: 2px;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .book-now.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
 }
 
 nav {
@@ -99,34 +123,42 @@ nav {
   top: 20px;
   right: 20px;
   z-index: 1001;
-  background-color: transparent;
-  margin: 27px auto;
+  background-color: rgba(0, 0, 0, 0.111);
+  margin: 12px auto;
+  padding: 12px;
 }
 
-/* Menu and Theme Toggle Button Styles */
-.menu-toggle {
-  cursor: pointer;
-  display: inline;
-  flex-direction: column;
-  justify-content: space-between;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.333);
-  padding: 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+/* Consistent button styles */
+.menu-toggle,
+.theme-toggle,
+.social-btn {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.333
+  ); /* Match the background color and opacity */
+  transition: background-color 0.3s ease;
   margin: 0 auto;
 }
 
-.menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.666);
+.menu-toggle:hover,
+.theme-toggle:hover,
+.social-btn:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.666
+  ); /* Match the hover background color and opacity */
 }
 
-.menu-toggle .bar {
+/* .menu-toggle .bar {
   width: 25px;
   height: 3px;
   background-color: #fff;
   margin: 4px 0;
-}
+} */
 
 .theme-toggle {
   cursor: pointer;
@@ -135,7 +167,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.333);
   padding: 14px;
   border-radius: 5px;
-  margin: 0 auto 27px;
+  margin: 0 auto 0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -223,14 +255,37 @@ body.dark-mode .theme-toggle img {
   transition: color 0.3s ease;
 }
 
-.social-media a {
-  color: #fff;
-  font-size: 1.25rem;
-  transition: color 0.3s ease;
+/* Consistent button styles */
+.social-btn {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.333
+  ); /* Match the background color and opacity */
+  transition: background-color 0.3s ease;
+  margin-bottom: 0; /* Ensure no extra margin at the bottom */
 }
 
-.social-media a:hover {
-  color: #ffd700;
+.social-btn:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.666
+  ); /* Match the hover background color and opacity */
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media a img {
+  /* width: 24px;  */
+  /* height: 24px; */
+  filter: invert(1); /* Ensure the icons are white */
 }
 
 /* Book Now Button Styles */

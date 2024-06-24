@@ -16,27 +16,36 @@
     </style>
 </head>
 <body class="dark:bg-gray-900 dark:text-gray-200 text-gray-800 overflow-x-hidden">
-  <header class="fixed w-full top-0 left-0 flex justify-between items-center p-4 z-50 bg-transparent">
-    <nav class="flex flex-col items-start fixed top-5 right-5 z-50">
-      <div class="menu-toggle cursor-pointer mb-4 p-[10px] rounded" onclick="toggleMenu()">
-          <div class="bar bg-white w-6 h-0.5 mb-1"></div>
-          <div class="bar bg-white w-6 h-0.5 mb-1"></div>
-          <div class="bar bg-white w-6 h-0.5"></div>
-      </div>
-      <hr class="w-full border-white mb-4 opacity-50">
-      <div class="theme-toggle cursor-pointer flex p-3 rounded" onclick="toggleTheme()">
-          <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme" class="w-4 h-4">
-      </div>
-      <hr class="w-full border-white mb-4 opacity-50">
-      <div class="social-media flex flex-col items-start gap-2">
-          <a href="https://www.facebook.com" class="text-white">Facebook</a>
-          <a href="https://www.instagram.com" class="text-white">Instagram</a>
-          <a href="https://www.twitter.com" class="text-white">Twitter</a>
-      </div>
-  </nav>
+  <header class="">
+<!-- index.html -->
+<nav class="flex flex-col items-start fixed top-[-4px] right-[-4px] lg:top-2 lg:right-2 z-50 gap-2">
+  <div class="menu-toggle cursor-pointer px-[6px] py-[9px] lg:px-[10.5px] lg:py-[13px] rounded" onclick="toggleMenu()">
+      <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px] mb-[4px] lg:mb-[6.5px]"></div>
+      <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px] mb-[4px] lg:mb-[6.5px]"></div>
+      <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px]"></div>
+  </div>
+  <hr class="w-full border-white opacity-50">
+  <div class="theme-toggle cursor-pointer flex px-[7px] py-[7px] lg:p-3 rounded" onclick="toggleTheme()">
+      <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme" class="w-4 h-4 lg:w-4 lg:h-4">
+  </div>
+  <hr class="w-full border-white opacity-50">
+  <div class="social-media flex flex-col items-start gap-2">
+      <a href="https://www.facebook.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
+          <img src="images/facebook-icon.svg" alt="Facebook" class="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] filter invert">
+      </a>
+      <a href="https://www.instagram.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
+          <img src="images/instagram-icon.svg" alt="Instagram" class="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] filter invert">
+      </a>
+      <a href="https://www.twitter.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
+          <img src="images/twitter-icon.svg" alt="Twitter" class="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] filter invert">
+      </a>
+  </div>
+</nav>
 
-  <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50" onclick="toggleMenu()"></div>
-  <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-black bg-opacity-90 flex flex-col justify-center items-center transition-all duration-300">
+
+
+  <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50 z-5" onclick="toggleMenu()"></div>
+  <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-black bg-opacity-90 flex flex-col justify-center items-center transition-all duration-300 z-10">
       <li class="my-5"><a href="/" class="text-white">Home</a></li>
       <li class="my-5"><a href="#about" class="text-white">About</a></li>
       <li class="my-5"><a href="#services" class="text-white">Services</a></li>
@@ -67,7 +76,7 @@
 
         <section id="about" class="py-12 text-center">
             <div class="about-content max-w-3xl mx-auto">
-                <h2 class="text-3xl font-playfair font-semibold mb-5">Meet Your Therapist <span class="text-lg p-[3px]">💕</span><span class="text-lg p-[3px]">💕</span><span class="text-lg p-[3px]">💕</span></h2>
+                <h2 class="text-3xl font-playfair font-semibold mb-5">Meet Your Therapist <span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span></h2>
                 <img src="images/sunny-headshot-1.png" alt="Therapist Headshot" class="therapist-headshot w-64 h-64 rounded-full mx-auto mb-5">
                 <p class="text-lg mb-5">Sunny Roundy is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
                 <a href="about.html" class="text-yellow-600 hover:text-yellow-700">Learn More</a>
