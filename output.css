@@ -24,14 +24,12 @@ body.dark-mode {
 /* Anchor tag styles */
 
 a {
-  color: #d4af37;
-  /* Gold */
+  /* color: #d4af37; */
   text-decoration: none;
 }
 
 a:hover {
-  color: #b8860b;
-  /* Darker gold */
+  /* color: #b8860b;  */
 }
 
 body.dark-mode a:hover {
@@ -224,7 +222,7 @@ body.dark-mode .theme-toggle img {
 }
 
 .nav-menu a {
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
   padding: 10px;
   transition: color 0.3s ease;
@@ -262,7 +260,7 @@ body.dark-mode .theme-toggle img {
 }
 
 .nav-menu a {
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
   padding: 10px;
   transition: color 0.3s ease;
@@ -386,7 +384,7 @@ body.dark-mode footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  background-color: rgba(0, 0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0); */
   max-width: 80%;
   margin: 0 auto;
   top: 50%;
@@ -738,7 +736,7 @@ footer {
 /* Hover effects for navigation links */
 
 .nav-menu a:hover {
-  color: #ffd700;
+  /* color: #ffd700; */
 }
 
 /* Style for social media links */
