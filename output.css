@@ -1,10 +1,7 @@
 /* General Styles */
 
-/* Font size, family, margins, color adjustments */
-
 html {
   font-size: 18px;
-  /* Set the base font size to 18px */
 }
 
 body {
@@ -21,31 +18,22 @@ body.dark-mode {
   background-color: #121212;
 }
 
-/* Anchor tag styles */
-
 a {
-  /* color: #d4af37; */
   text-decoration: none;
 }
 
 a:hover {
-  /* color: #b8860b;  */
+  color: #b8860b;
 }
 
 body.dark-mode a:hover {
-  color: #ffe98d;
-  /* Gold for dark mode */
   color: #ffd700;
-  /* Brighter gold */
 }
-
-/* Typography styles for headings and paragraphs */
 
 h1,
 h2,
 h3 {
   font-family: "Playfair Display", serif;
-  /* Elegant Header Font */
   text-align: center;
   line-height: 1.3;
 }
@@ -81,8 +69,6 @@ body.dark-mode .service p,
 body.dark-mode #contact-form label {
   color: #f0f0f0;
 }
-
-/* Responsive Header Styles */
 
 header {
   padding: 0px;
@@ -134,18 +120,10 @@ nav {
   padding: 12px;
 }
 
-/* Consistent button styles */
-
 .menu-toggle,
 .theme-toggle,
 .social-btn {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.333
-  );
-  /* Match the background color and opacity */
+  background-color: rgba(0, 0, 0, 0.333);
   transition: background-color 0.3s ease;
   margin: 0 auto;
 }
@@ -153,21 +131,8 @@ nav {
 .menu-toggle:hover,
 .theme-toggle:hover,
 .social-btn:hover {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.666
-  );
-  /* Match the hover background color and opacity */
+  background-color: rgba(0, 0, 0, 0.666);
 }
-
-/* .menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px 0;
-} */
 
 .theme-toggle {
   cursor: pointer;
@@ -194,8 +159,6 @@ body.dark-mode .theme-toggle img {
   filter: invert(1);
 }
 
-/* Navigation Menu Styles */
-
 .nav-menu {
   list-style: none;
   margin: 0;
@@ -222,73 +185,23 @@ body.dark-mode .theme-toggle img {
 }
 
 .nav-menu a {
-  /* color: #fff; */
   text-decoration: none;
   padding: 10px;
   transition: color 0.3s ease;
 }
-
-/* Overlay Styles for Menu */
 
 .menu-overlay.active {
   display: block;
 }
 
-.nav-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  top: 0;
-  right: -100%;
-  height: 100%;
-  width: 250px;
-  transition: right 0.3s ease;
-}
-
-.nav-menu.active {
-  right: 0;
-}
-
-.nav-menu li {
-  margin: 20px 0;
-}
-
-.nav-menu a {
-  /* color: #fff; */
-  text-decoration: none;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-/* Consistent button styles */
-
 .social-btn {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.333
-  );
-  /* Match the background color and opacity */
+  background-color: rgba(0, 0, 0, 0.333);
   transition: background-color 0.3s ease;
   margin-bottom: 0;
-  /* Ensure no extra margin at the bottom */
 }
 
 .social-btn:hover {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.666
-  );
-  /* Match the hover background color and opacity */
+  background-color: rgba(0, 0, 0, 0.666);
 }
 
 .social-media a {
@@ -298,13 +211,8 @@ body.dark-mode .theme-toggle img {
 }
 
 .social-media a img {
-  /* width: 24px;  */
-  /* height: 24px; */
   filter: invert(1);
-  /* Ensure the icons are white */
 }
-
-/* Book Now Button Styles */
 
 .book-now {
   display: inline-block;
@@ -321,7 +229,7 @@ body.dark-mode .theme-toggle img {
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
-  margin: 32px 0 16px;
+  margin-top: 32px;
 }
 
 .book-now:hover {
@@ -344,7 +252,9 @@ body.dark-mode footer {
   color: #f0f0f0;
 }
 
-/* Hero Section Styles */
+body.dark-mode #services {
+  background-color: #1f1f1f;
+}
 
 #hero {
   padding: 0;
@@ -384,7 +294,7 @@ body.dark-mode footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: transparent;
   max-width: 80%;
   margin: 0 auto;
   top: 50%;
@@ -421,8 +331,6 @@ body.dark-mode #particles-js {
   background-color: transparent;
 }
 
-/* Section Styles */
-
 section {
   padding: 50px 20px;
   text-align: center;
@@ -449,6 +357,65 @@ body #hero {
   background-color: transparent;
 }
 
+#gallery {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+body.dark-mode #gallery {
+  background-color: #1f1f1f;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
 .about-content,
 .service-grid {
   max-width: 800px;
@@ -463,28 +430,81 @@ body #hero {
   display: block;
 }
 
+#services {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.service:hover .service-icon {
+  color: #e6b800;
 }
 
 .service h3 {
-  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
   font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .service p {
-  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.service p:last-of-type {
   font-size: 1.125rem;
+  font-weight: 700;
+  color: #333;
+}
+
+body.dark-mode .service-icon {
+  color: #ffe98d;
+}
+
+body.dark-mode .service:hover .service-icon {
+  color: #ffd700;
+}
+
+body.dark-mode .service h3,
+body.dark-mode .service p {
+  color: #f0f0f0;
+}
+
+body.dark-mode .service p:last-of-type {
+  color: #fff;
 }
 
 .memberships ul {
@@ -495,13 +515,38 @@ body #hero {
   text-align: left;
 }
 
-.membership-benefits p {
+.membership-benefits {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .membership-benefits {
+  background-color: #1f1f1f;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.benefit-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.benefit-item p {
   font-size: 1.125rem;
-  margin-bottom: 10px;
   color: #333;
 }
 
-body.dark-mode .membership-benefits p {
+body.dark-mode .benefit-item p {
   color: #f0f0f0;
 }
 
@@ -548,8 +593,6 @@ footer {
   margin-top: 20px;
   font-size: 1rem;
 }
-
-/* Media Queries for Responsive Design */
 
 @media (max-width: 1200px) {
   h1 {
@@ -663,8 +706,6 @@ footer {
   }
 }
 
-/* Responsive styles for contact form */
-
 @media (max-width: 768px) {
   #contact-form {
     padding: 0 20px;
@@ -673,11 +714,7 @@ footer {
   #contact-form button {
     font-size: 14px;
   }
-}
 
-/* Responsive styles for membership section */
-
-@media (max-width: 768px) {
   .memberships ul {
     padding: 0 20px;
   }
@@ -685,11 +722,7 @@ footer {
   .memberships ul li {
     font-size: 14px;
   }
-}
 
-/* Responsive styles for services section */
-
-@media (max-width: 768px) {
   .service-grid {
     grid-template-columns: 1fr;
   }
@@ -706,8 +739,6 @@ footer {
     font-size: 1rem;
   }
 }
-
-/* Additional styles for small devices */
 
 @media (max-width: 576px) {
   .book-now {
@@ -733,13 +764,9 @@ footer {
   }
 }
 
-/* Hover effects for navigation links */
-
 .nav-menu a:hover {
-  /* color: #ffd700; */
+  color: #ffd700;
 }
-
-/* Style for social media links */
 
 #social-media-links {
   display: flex;
@@ -757,8 +784,6 @@ footer {
 #social-media-links a:hover {
   color: #ffd700;
 }
-
-/* Additional styles for testimonials section */
 
 #testimonials {
   background-color: #f8f8f8;
@@ -796,8 +821,6 @@ body.dark-mode .testimonial {
   font-weight: bold;
   font-size: 0.875rem;
 }
-
-/* Additional footer styles */
 
 footer {
   background-color: #222;

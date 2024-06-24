@@ -1,253 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience the transformative power of therapeutic massage and energy work with SLC Massage & Energy. Book your appointment today!">
-    <title>SLC Massage & Energy | Healing Touch. Renewed Energy.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
-        html { font-size: 18px; }
-        body { font-family: 'Lato', sans-serif; }
-        .font-playfair { font-family: 'Playfair Display', serif; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience the transformative power of therapeutic massage and energy work with SLC Massage & Energy. Book your appointment today!">
+  <title>SLC Massage & Energy | Healing Touch. Renewed Energy.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
+
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
 </head>
-<body class="dark:bg-gray-900 dark:text-gray-200 text-gray-800 overflow-x-hidden">
-  <header class="">
-<!-- index.html -->
-<nav class="flex flex-col items-start fixed top-[-4px] right-[-4px] lg:top-2 lg:right-2 z-50 gap-2">
-  <div class="menu-toggle cursor-pointer px-[6px] py-[9px] lg:px-[10.5px] lg:py-[13px] rounded" onclick="toggleMenu()">
-      <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px] mb-[4px] lg:mb-[6.5px]"></div>
-      <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px] mb-[4px] lg:mb-[6.5px]"></div>
-      <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px]"></div>
-  </div>
-  <hr class="w-full border-white opacity-50">
-  <div class="theme-toggle cursor-pointer flex px-[7px] py-[7px] lg:p-3 rounded" onclick="toggleTheme()">
-      <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme" class="w-4 h-4 lg:w-4 lg:h-4">
-  </div>
-  <hr class="w-full border-white opacity-50">
-  <div class="social-media flex flex-col items-start gap-2">
-      <a href="https://www.facebook.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
+
+<body class="dark:bg-gray-900 dark:text-gray-200 text-gray-800">
+  <header>
+    <nav class="flex flex-col items-start fixed top-[-4px] right-[-4px] lg:top-2 lg:right-2 z-50 gap-2">
+      <div class="menu-toggle cursor-pointer px-[6px] py-[9px] lg:px-[10.5px] lg:py-[13px] rounded" onclick="toggleMenu()">
+        <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px] mb-[4px] lg:mb-[6.5px]"></div>
+        <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px] mb-[4px] lg:mb-[6.5px]"></div>
+        <div class="bar bg-white w-[13px] h-[2px] lg:w-[24px]"></div>
+      </div>
+      <hr class="w-full border-white opacity-50">
+      <div class="theme-toggle cursor-pointer flex px-[7px] py-[7px] lg:p-3 rounded" onclick="toggleTheme()">
+        <img id="theme-icon" src="images/moon-icon.svg" alt="Toggle Theme" class="w-4 h-4 lg:w-4 lg:h-4">
+      </div>
+      <hr class="w-full border-white opacity-50">
+      <div class="social-media flex flex-col items-start gap-2">
+        <a href="https://www.facebook.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
           <img src="images/facebook-icon.svg" alt="Facebook" class="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] filter invert">
-      </a>
-      <a href="https://www.instagram.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
+        </a>
+        <a href="https://www.instagram.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
           <img src="images/instagram-icon.svg" alt="Instagram" class="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] filter invert">
-      </a>
-      <a href="https://www.twitter.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
+        </a>
+        <a href="https://www.twitter.com" class="social-btn cursor-pointer p-[6px] lg:p-[10.5px] rounded">
           <img src="images/twitter-icon.svg" alt="Twitter" class="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] filter invert">
-      </a>
-  </div>
-</nav>
-
-
-
-  <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50 z-5" onclick="toggleMenu()"></div>
-  <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-black bg-opacity-90 flex flex-col justify-center items-center transition-all duration-300 z-10">
+        </a>
+      </div>
+    </nav>
+    <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50 z-5" onclick="toggleMenu()"></div>
+    <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-black bg-opacity-90 flex flex-col justify-center items-center transition-all duration-300 z-10">
       <li class="my-5"><a href="/" class="text-yellow-600 hover:text-yellow-700">Home</a></li>
       <li class="my-5"><a href="#about" class="text-yellow-600 hover:text-yellow-700">About</a></li>
       <li class="my-5"><a href="#services" class="text-yellow-600 hover:text-yellow-700">Services</a></li>
       <li class="my-5"><a href="#memberships" class="text-yellow-600 hover:text-yellow-700">Memberships</a></li>
       <li class="my-5"><a href="#contact" class="text-yellow-600 hover:text-yellow-700">Contact</a></li>
       <li class="my-5"><a href="#book-now" class="book-now small text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-4 py-2 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a></li>
-  </ul>
-</header>
+    </ul>
+  </header>
+  <main>
+    <section id="hero" class="relative bg-gray-900 text-white">
+      <div class="parallax relative h-screen overflow-hidden">
+        <div class="video-container absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+          <video autoplay muted loop playsinline id="bg-video" poster="images/fallback.jpg" class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+            <source src="images/spa-background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div id="particles-js" class="absolute inset-0 -z-10"></div>
+        <div class="hero-content pointer-events-none relative text-center text-white py-5 max-w-4xl mx-auto top-1/2 transform -translate-y-1/2">
+          <a href="#"><img src="images/slc-massage-energy-logo-white.svg" alt="SLC Massage & Energy Logo" class="hero-logo h-48 mb-5 mx-auto"></a>
+          <h2 class="text-5xl font-playfair font-light">Healing Touch. Renewed Energy.</h2>
+          <p class="text-xl mt-3 mb-5">Experience the transformative power of therapeutic massage and energy work.</p>
+          <a href="#book-now" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a>
+        </div>
+      </div>
+    </section>
 
-    <main>
-        <section id="hero" class="relative">
-            <div class="parallax relative h-screen overflow-hidden">
-                <div class="video-container absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-                    <video autoplay muted loop playsinline id="bg-video" poster="images/fallback.jpg" class="absolute top-0 left-0 w-full h-full object-cover -z-10">
-                        <source src="images/spa-background.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div id="particles-js" class="absolute inset-0 -z-10"></div>
-                <div class="hero-content relative text-center text-white py-5 max-w-4xl mx-auto top-1/2 transform -translate-y-1/2">
-                    <a href="#"><img src="images/slc-massage-energy-logo-white.svg" alt="SLC Massage & Energy Logo" class="hero-logo h-48 mb-5 mx-auto"></a>
-                    <h2 class="text-5xl font-playfair font-light">Healing Touch. Renewed Energy.</h2>
-                    <p class="text-xl mt-3 mb-5">Experience the transformative power of therapeutic massage and energy work.</p>
-                    <a href="#book-now" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a>
-                </div>
+    <div class="text-center my-4">
+      <button id="toggle-particles" class="text-[16px] text-blue-600 border border-blue-600 px-2 py-1 rounded-md hover:bg-blue-600 hover:text-white transition">Toggle to Particle Two</button>
+      <p class="mt-2 text-[14px] text-gray-700">Click the button to switch between different particle interactions.</p>
+    </div>
+
+
+    <section id="gallery" class="py-12 text-center bg-gray-100 dark:bg-gray-900">
+      <h2 class="text-3xl font-playfair font-semibold mb-8">Our Gallery</h2>
+      <div class="gallery-grid max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="gallery-item relative overflow-hidden">
+          <a href="images/image-1.jpg" data-lightbox="gallery" data-title="Relaxing Atmosphere">
+            <img src="images/image-1.jpg" alt="Image 1" class="gallery-image">
+          </a>
+          <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+            <p class="text-white text-sm font-semibold">Relaxing Atmosphere</p>
+          </div>
+        </div>
+        <div class="gallery-item relative overflow-hidden">
+          <a href="images/image-2.jpg" data-lightbox="gallery" data-title="Professional Staff">
+            <img src="images/image-2.jpg" alt="Image 2" class="gallery-image">
+          </a>
+          <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+            <p class="text-white text-sm font-semibold">Professional Staff</p>
+          </div>
+        </div>
+        <div class="gallery-item relative overflow-hidden">
+          <a href="images/image-3.jpg" data-lightbox="gallery" data-title="Serene Environment">
+            <img src="images/image-3.jpg" alt="Image 3" class="gallery-image">
+          </a>
+          <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+            <p class="text-white text-sm font-semibold">Serene Environment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="about" class="py-12 text-center bg-gray-200 dark:bg-gray-800">
+      <div class="about-content max-w-3xl mx-auto">
+        <h2 class="text-3xl font-playfair font-semibold mb-5">Meet Your Therapist <span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span></h2>
+        <img src="images/sunny-headshot-1.png" alt="Therapist Headshot" class="therapist-headshot w-[20rem] h-[20rem] rounded-full mx-auto mb-5">
+        <p class="text-lg mb-5">Sunny Roundy is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
+        <a href="about.html" class="text-yellow-600 hover:text-yellow-700">Learn More</a>
+      </div>
+    </section>
+
+    <section id="services" class="py-12 text-center bg-gray-300 dark:bg-gray-700">
+      <h2 class="text-3xl font-playfair font-semibold mb-5">Our Services</h2>
+      <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="service bg-white dark:bg-gray-700 p-8 rounded-lg shadow transform transition-transform hover:scale-105">
+          <i class="fas fa-hand-holding-heart service-icon mb-5 text-yellow-600"></i>
+          <h3 class="text-2xl font-playfair font-semibold mb-3">Swedish Massage</h3>
+          <p class="text-base text-gray-700 dark:text-gray-300 mb-3">Gentle, flowing strokes for relaxation and stress relief.</p>
+          <p class="text-lg font-bold text-gray-800 dark:text-gray-100">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-8 rounded-lg shadow transform transition-transform hover:scale-105">
+          <i class="fas fa-baby service-icon mb-5 text-yellow-600"></i>
+          <h3 class="text-2xl font-playfair font-semibold mb-3">Prenatal Massage</h3>
+          <p class="text-base text-gray-700 dark:text-gray-300 mb-3">Specialized care for expectant mothers, promoting comfort and well-being.</p>
+          <p class="text-lg font-bold text-gray-800 dark:text-gray-100">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-8 rounded-lg shadow transform transition-transform hover:scale-105">
+          <i class="fas fa-crosshairs service-icon mb-5 text-yellow-600"></i>
+          <h3 class="text-2xl font-playfair font-semibold mb-3">Trigger Point</h3>
+          <p class="text-base text-gray-700 dark:text-gray-300 mb-3">Focused pressure on specific points to relieve muscle tension and pain.</p>
+          <p class="text-lg font-bold text-gray-800 dark:text-gray-100">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+          <h3 class="text-2xl font-playfair mb-2">Chair Massage</h3>
+          <p class="mb-2">Quick, convenient massage for relaxation and stress relief.</p>
+          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+          <h3 class="text-2xl font-playfair mb-2">Russian Massage</h3>
+          <p class="mb-2">Unique techniques to improve circulation and reduce muscle tension.</p>
+          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+          <h3 class="text-2xl font-playfair mb-2">Shiatsu</h3>
+          <p class="mb-2">Japanese technique using finger pressure to improve energy flow.</p>
+          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+          <h3 class="text-2xl font-playfair mb-2">Thai Massage</h3>
+          <p class="mb-2">Combination of acupressure and assisted yoga postures.</p>
+          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+          <h3 class="text-2xl font-playfair mb-2">Lymphatic Drainage</h3>
+          <p class="mb-2">Gentle technique to stimulate the lymphatic system and reduce swelling.</p>
+          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+          <h3 class="text-2xl font-playfair mb-2">Sports Massage</h3>
+          <p class="mb-2">Targeted techniques to improve athletic performance and recovery.</p>
+          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+          <h3 class="text-2xl font-playfair mb-2">Reflexology</h3>
+          <p class="mb-2">Application of pressure to specific points on the feet to improve health.</p>
+          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        </div>
+        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
+          <h3 class="text-2xl font-playfair mb-2">Deep Tissue Massage</h3>
+          <p class="mb-2">Intense massage focusing on deeper layers of muscle tissue.</p>
+          <p class="text-lg">60 minutes - $95<br>90 minutes - $135</p>
+        </div>
+      </div>
+    </section>
+`
+
+        <section id="memberships" class="py-12 text-center bg-gray-400 dark:bg-gray-600">
+          <h2 class="text-3xl font-playfair font-semibold mb-5">Membership Benefits</h2>
+          <div class="membership-benefits max-w-lg mx-auto text-left text-lg text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+            <div class="benefit-item flex items-center mb-4">
+              <img src="images/discount-icon.svg" alt="Discount Icon" class="benefit-icon mr-3">
+              <p><strong>Save on Every Session:</strong> Enjoy a 10% discount on all 60-minute sessions and a 15% discount on 90-minute sessions.</p>
             </div>
+            <div class="benefit-item flex items-center mb-4">
+              <img src="images/birthday-icon.svg" alt="Birthday Icon" class="benefit-icon mr-3">
+              <p><strong>Celebrate with Us:</strong> Receive a complimentary massage on your birthday.</p>
+            </div>
+            <div class="benefit-item flex items-center mb-4">
+              <img src="images/friend-icon.svg" alt="Share with a Friend Icon" class="benefit-icon mr-3">
+              <p><strong>Bring a Friend:</strong> Share your membership benefits with a friend for a special shared experience.</p>
+            </div>
+            <div class="benefit-item flex items-center mb-4">
+              <img src="images/additional-discount-icon.svg" alt="Additional Discounts Icon" class="benefit-icon mr-3">
+              <p><strong>Additional Discounts:</strong> Get exclusive discounts on additional services and treatments.</p>
+            </div>
+            <div class="benefit-item flex items-center mb-4">
+              <img src="images/priority-booking-icon.svg" alt="Priority Booking Icon" class="benefit-icon mr-3">
+              <p><strong>Priority Booking:</strong> Members get priority access to appointment slots, ensuring you never miss out on your preferred time.</p>
+            </div>
+          </div>
+          <a href="#" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5 mt-5">Join Now</a>
         </section>
 
-        <section id="about" class="py-12 text-center">
-            <div class="about-content max-w-3xl mx-auto">
-                <h2 class="text-3xl font-playfair font-semibold mb-5">Meet Your Therapist <span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span></h2>
-                <img src="images/sunny-headshot-1.png" alt="Therapist Headshot" class="therapist-headshot w-64 h-64 rounded-full mx-auto mb-5">
-                <p class="text-lg mb-5">Sunny Roundy is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
-                <a href="about.html" class="text-yellow-600 hover:text-yellow-700">Learn More</a>
+        <section id="testimonials" class="py-12 text-center bg-gray-500 dark:bg-gray-500">
+          <div class="testimonials-background relative">
+            <img src="https://via.placeholder.com/1500x800" alt="Testimonials Background" class="background-image absolute inset-0 w-full h-full object-cover opacity-20">
+            <div class="testimonials-content relative z-10">
+              <h2 class="text-3xl font-playfair font-semibold mb-5">Testimonials</h2>
+              <div class="testimonial-item bg-white dark:bg-gray-700 p-5 rounded-lg shadow mb-5">
+                <p class="text-lg">"The best massage therapy I've ever experienced. Truly transformative!"</p>
+                <p class="author font-bold text-sm mt-2">- Jane Doe</p>
+              </div>
+              <!-- Add more testimonials as needed -->
             </div>
+          </div>
         </section>
 
-        <section id="services" class="py-12 text-center bg-gray-100 dark:bg-gray-800">
-            <h2 class="text-3xl font-playfair font-semibold mb-5">Our Services</h2>
-            <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Swedish Massage</h3>
-                <p class="mb-2">Gentle, flowing strokes for relaxation and stress relief.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Prenatal Massage</h3>
-                <p class="mb-2">Specialized care for expectant mothers, promoting comfort and well-being.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Trigger Point</h3>
-                <p class="mb-2">Focused pressure on specific points to relieve muscle tension and pain.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Chair Massage</h3>
-                <p class="mb-2">Quick, convenient massage for relaxation and stress relief.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Russian Massage</h3>
-                <p class="mb-2">Unique techniques to improve circulation and reduce muscle tension.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Shiatsu</h3>
-                <p class="mb-2">Japanese technique using finger pressure to improve energy flow.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Thai Massage</h3>
-                <p class="mb-2">Combination of acupressure and assisted yoga postures.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Lymphatic Drainage</h3>
-                <p class="mb-2">Gentle technique to stimulate the lymphatic system and reduce swelling.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Sports Massage</h3>
-                <p class="mb-2">Targeted techniques to improve athletic performance and recovery.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Reflexology</h3>
-                <p class="mb-2">Application of pressure to specific points on the feet to improve health.</p>
-                <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-              </div>
-              <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-                <h3 class="text-2xl font-playfair mb-2">Deep Tissue Massage</h3>
-                <p class="mb-2">Intense massage focusing on deeper layers of muscle tissue.</p>
-                <p class="text-lg">60 minutes - $95<br>90 minutes - $135</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="memberships" class="py-12 text-center bg-white dark:bg-gray-900">
-            <h2 class="text-3xl font-playfair font-semibold mb-5">Membership Benefits</h2>
-            <div class="membership-benefits max-w-md mx-auto text-left text-lg text-gray-800 dark:text-gray-200">
-              <p class="mb-2">10% off 60-minute sessions</p>
-              <p class="mb-2">15% off 90-minute sessions</p>
-              <p class="mb-2">Free birthday massage</p>
-              <p class="mb-2">Shareable with a friend</p>
-              <p class="mb-2">Discounts on additional services</p>
-            </div>
-            <a href="#" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5 mt-5">Join Now</a>
-          </section>
-
-          <section id="testimonials" class="py-12 text-center bg-gray-100 dark:bg-gray-800">
-            <div class="testimonials-background relative">
-              <img src="https://via.placeholder.com/1500x800" alt="Testimonials Background" class="background-image absolute inset-0 w-full h-full object-cover opacity-20">
-              <div class="testimonials-content relative z-10">
-                <h2 class="text-3xl font-playfair font-semibold mb-5">Testimonials</h2>
-                <div class="testimonial-item bg-white dark:bg-gray-700 p-5 rounded-lg shadow mb-5">
-                  <p class="text-lg">"The best massage therapy I've ever experienced. Truly transformative!"</p>
-                  <p class="author font-bold text-sm mt-2">- Jane Doe</p>
-                </div>
-                <!-- Add more testimonials as needed -->
-              </div>
-            </div>
-          </section>
-
-        <section id="book-now" class="py-12 text-center">
-            <h2 class="text-3xl font-playfair font-semibold mb-5">Book Your Appointment</h2>
-            <p class="text-lg mb-5">Schedule your session easily with our online booking system.</p>
-            <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-username" style="min-width:320px;height:630px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <section id="book-now" class="py-12 text-center bg-gray-600 dark:bg-gray-400">
+          <h2 class="text-3xl font-playfair font-semibold mb-5">Book Your Appointment</h2>
+          <p class="text-lg mb-5">Schedule your session easily with our online booking system.</p>
+          <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-username" style="min-width:320px;height:630px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </section>
 
-        <section id="contact" class="py-12 text-center bg-gray-100 dark:bg-gray-800">
-            <h2 class="text-3xl font-playfair font-semibold mb-5">Contact Us</h2>
-            <form id="contact-form" class="max-w-xl mx-auto text-left">
-                <label for="name" class="block text-lg mb-1">Name:</label>
-                <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
+        <section id="contact" class="py-12 text-center bg-gray-600 dark:bg-gray-400">
+          <h2 class="text-3xl font-playfair font-semibold mb-5">Contact Us</h2>
+          <form id="contact-form" class="max-w-xl mx-auto text-left">
+            <label for="name" class="block text-lg mb-1">Name:</label>
+            <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
 
-                <label for="email" class="block text-lg mb-1">Email:</label>
-                <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
+            <label for="email" class="block text-lg mb-1">Email:</label>
+            <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
 
-                <label for="message" class="block text-lg mb-1">Message:</label>
-                <textarea id="message" name="message" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500"></textarea>
+            <label for="message" class="block text-lg mb-1">Message:</label>
+            <textarea id="message" name="message" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500"></textarea>
 
-                <button type="submit" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Send Message</button>
-            </form>
-            <p class="text-lg mt-5">Phone: [Your Partner's Phone Number]</p>
-            <p class="text-lg">Email: [Your Partner's Email Address]</p>
-            <div id="social-media-links" class="flex justify-center gap-5 mt-5">
-                <!-- Social media links -->
-            </div>
+            <button type="submit" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Send Message</button>
+          </form>
+          <p class="text-lg mt-5">Phone: [Your Partner's Phone Number]</p>
+          <p class="text-lg">Email: [Your Partner's Email Address]</p>
+          <div id="social-media-links" class="flex justify-center gap-5 mt-5">
+            <!-- Social media links -->
+          </div>
         </section>
-    </main>
+      </main>
 
-    <footer class="bg-black text-white p-5 text-center">
+      <footer class="bg-black text-white p-5 text-center">
         <p class="text-sm">&copy; 2024 SLC Massage & Energy</p>
-    </footer>
+      </footer>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        particlesJS('particles-js',
-        {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                }
+      const particleOneConfig = {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+          }
+        },
+        "retina_detect": true
+      };
+
+      const particleTwoConfig = {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": true,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "repulse"
             },
-            "retina_detect": true
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      };
+
+      let currentConfig = particleOneConfig;
+      let currentParticle = 'One';
+
+      particlesJS('particles-js', currentConfig);
+
+      document.getElementById('toggle-particles').addEventListener('click', function () {
+        currentConfig = (currentConfig === particleOneConfig) ? particleTwoConfig : particleOneConfig;
+        currentParticle = (currentParticle === 'One') ? 'Two' : 'One';
+        particlesJS('particles-js', currentConfig);
+        document.getElementById('toggle-particles').innerText = `Toggle to Particle ${currentParticle}`;
+      });
+
+      // Update particle position based on touch/mouse movement
+      function updateParticles(e) {
+        let posX, posY;
+        if (e.type === "mousemove") {
+          posX = e.clientX;
+          posY = e.clientY;
+        } else if (e.type === "touchmove") {
+          posX = e.touches[0].clientX;
+          posY = e.touches[0].clientY;
+        }
+
+        particlesJS.particles.interactivity.mouse.pos_x = posX;
+        particlesJS.particles.interactivity.mouse.pos_y = posY;
+      }
+
+      // Add event listeners for touch and mouse movements
+      document.getElementById('particles-js').addEventListener('mousemove', updateParticles);
+      document.getElementById('particles-js').addEventListener('touchmove', updateParticles);
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.testimonials-content').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
         });
     </script>
 </body>
