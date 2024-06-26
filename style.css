@@ -1,4 +1,6 @@
-/* General Styles /
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* General Styles */
 html {
@@ -220,12 +222,12 @@ body.dark-mode .theme-toggle img {
   background: linear-gradient(to top, #b8860b, #ffd700, #ffeea4);
   color: #fff !important;
   padding: 12px 24px;
-  border: none;
+  border: 1px solid #FFD700;
   border-radius: 5px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5),
     0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: all 0.2s ease, background 0.2s ease;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
@@ -304,7 +306,7 @@ body.dark-mode #services {
 
 .hero-content h2 {
   font-size: 3.25em;
-  margin: 0;
+  /* margin: 0; */
   font-weight: 400;
 }
 
@@ -357,15 +359,7 @@ body #hero {
   background-color: transparent;
 }
 
-#gallery {
-  padding: 3rem 1rem;
-  background-color: #f9f9f9;
-}
-
-body.dark-mode #gallery {
-  background-color: #1f1f1f;
-}
-
+/* Your existing styles */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -415,6 +409,37 @@ body.dark-mode #gallery {
   opacity: 1;
 }
 
+
+/* Lightbox Styles */
+
+#lightbox {
+  display: flex; /* Ensure flexbox layout */
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox-img {
+  max-width: 90vw; /* Limit image width to 90% of viewport width */
+  max-height: 90vh; /* Limit image height to 90% of viewport height */
+  border: 4px solid white; /* Add a white border to the image */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add a shadow to the image */
+}
+
+#close-lightbox {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+#close-lightbox:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+
 .about-content,
 .service-grid {
   max-width: 800px;
@@ -445,11 +470,11 @@ body.dark-mode #gallery {
 
 .service {
   background-color: #fff;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
+  text-align: center;
 }
 
 .service:hover {
@@ -458,9 +483,8 @@ body.dark-mode #gallery {
 }
 
 .service-icon {
-  font-size: 3rem;
+  /* font-size: 3rem; */
   color: #ffd700;
-  margin-bottom: 1.5rem;
   transition: color 0.3s ease;
 }
 
@@ -468,11 +492,27 @@ body.dark-mode #gallery {
   color: #e6b800;
 }
 
+/* .service:hover img {
+  transform: scale(1.1);
+} */
+
+.shiatsu-object-position {
+  object-position: 0 -233px;
+}
+
+.reflexology-object-position {
+  object-position: 0 -119px;
+}
+
+.lymphatic-object-position {
+  object-position: 82px 0;
+}
+
 .service h3 {
   font-family: "Playfair Display", serif;
-  font-size: 1.75rem;
+  /* font-size: 1.25rem; */
   font-weight: 600;
-  margin-bottom: 1rem;
+  /* margin-bottom: .5rem; */
 }
 
 .service p {
@@ -484,13 +524,14 @@ body.dark-mode #gallery {
 }
 
 .service p:last-of-type {
-  font-size: 1.125rem;
+  /* font-size: 1.125rem; */
   font-weight: 700;
   color: #333;
 }
 
 body.dark-mode .service-icon {
-  color: #ffe98d;
+  /* color: #ffe98d; */
+  color: rgba(255, 255, 255, .3);
 }
 
 body.dark-mode .service:hover .service-icon {

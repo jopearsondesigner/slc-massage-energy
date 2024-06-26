@@ -10,10 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
 
@@ -69,7 +66,7 @@
     </ul>
   </header>
   <main>
-    <section id="hero" class="relative bg-gray-900 text-white">
+    <section id="hero" class="relative bg-gray-transparent text-white">
       <div class="parallax relative h-screen overflow-hidden">
         <div class="video-container absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
           <video autoplay muted loop playsinline id="bg-video" poster="images/fallback.jpg" class="absolute top-0 left-0 w-full h-full object-cover -z-10">
@@ -78,24 +75,24 @@
           </video>
         </div>
         <div id="particles-js" class="absolute inset-0 -z-10"></div>
-        <div class="hero-content pointer-events-none relative text-center text-white py-5 max-w-4xl mx-auto top-1/2 transform -translate-y-1/2">
-          <a href="#"><img src="images/slc-massage-energy-logo-white.svg" alt="SLC Massage & Energy Logo" class="hero-logo h-48 mb-5 mx-auto"></a>
-          <h2 class="text-5xl font-playfair font-light">Healing Touch. Renewed Energy.</h2>
-          <p class="text-xl mt-3 mb-5">Experience the transformative power of therapeutic massage and energy work.</p>
-          <a href="#book-now" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a>
+        <div class="hero-content relative text-center text-white py-5 max-w-4xl mx-auto top-1/2 transform -translate-y-1/2">
+          <a href="#"><img src="images/slc-massage-energy-logo-white.svg" alt="SLC Massage & Energy Logo" class="hero-logo pointer-events-none h-48 mb-5 mx-auto"></a>
+          <h2 class="text-5xl font-playfair font-light mb-4 drop-shadow-lg pointer-events-none mb-3">Healing Touch. Renewed Energy.</h2>
+          <p class="text-xl mt-3 mb-5 pointer-events-none">Experience the transformative power of therapeutic massage and energy work.</p>
+          <a href="#book-now" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner transition-transform transform hover:-translate-y-0.5">Book Now</a>
         </div>
       </div>
     </section>
 
-    <div class="text-center my-4">
-      <button id="toggle-particles" class="text-[16px] text-blue-600 border border-blue-600 px-2 py-1 rounded-md hover:bg-blue-600 hover:text-white transition">Toggle to Particle Two</button>
-      <p class="mt-2 text-[14px] text-gray-700">Click the button to switch between different particle interactions.</p>
-    </div>
-
+    <section class="text-center py-4 bg-gray-400 dark:bg-gray-900">
+      <button id="toggle-particles" class="text-[16px] text-blue-600 border border-blue-600 px-2 py-1 rounded-md hover:bg-blue-600 hover:text-white transition ease-in duration-300">Interactive Particle Pattern Two</button>
+      <p class="mt-2.5 text-[14px] text-gray-700">Click the button to switch between different particle interactions.</p>
+    </section>
 
     <section id="gallery" class="py-12 text-center bg-gray-100 dark:bg-gray-900">
       <h2 class="text-3xl font-playfair font-semibold mb-8">Our Gallery</h2>
       <div class="gallery-grid max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
         <div class="gallery-item relative overflow-hidden">
           <a href="images/image-1.jpg" data-lightbox="gallery" data-title="Relaxing Atmosphere">
             <img src="images/image-1.jpg" alt="Image 1" class="gallery-image">
@@ -104,125 +101,181 @@
             <p class="text-white text-sm font-semibold">Relaxing Atmosphere</p>
           </div>
         </div>
-        <div class="gallery-item relative overflow-hidden">
-          <a href="images/image-2.jpg" data-lightbox="gallery" data-title="Professional Staff">
-            <img src="images/image-2.jpg" alt="Image 2" class="gallery-image">
-          </a>
-          <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-            <p class="text-white text-sm font-semibold">Professional Staff</p>
-          </div>
-        </div>
-        <div class="gallery-item relative overflow-hidden">
-          <a href="images/image-3.jpg" data-lightbox="gallery" data-title="Serene Environment">
-            <img src="images/image-3.jpg" alt="Image 3" class="gallery-image">
-          </a>
-          <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-            <p class="text-white text-sm font-semibold">Serene Environment</p>
-          </div>
-        </div>
+
+        <!-- <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center">
+          <img id="lightbox-img" src="" alt="" class="max-h-full max-w-full">
+          <span id="close-lightbox" class="absolute top-2 right-2 text-white text-2xl cursor-pointer">&times;</span>
+        </div> -->
       </div>
     </section>
-
-
     <section id="about" class="py-12 text-center bg-gray-200 dark:bg-gray-800">
       <div class="about-content max-w-3xl mx-auto">
-        <h2 class="text-3xl font-playfair font-semibold mb-5">Meet Your Therapist <span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span></h2>
+        <h2 class="text-3xl font-playfair font-semibold mb-8">Meet Your Therapist <span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span></h2>
         <img src="images/sunny-headshot-1.png" alt="Therapist Headshot" class="therapist-headshot w-[20rem] h-[20rem] rounded-full mx-auto mb-5">
         <p class="text-lg mb-5">Sunny Roundy is a dedicated massage therapist with a passion for holistic healing. Combining clinical expertise with energy work, she creates a safe space for clients to relax, rejuvenate, and find balance.</p>
         <a href="about.html" class="text-yellow-600 hover:text-yellow-700">Learn More</a>
       </div>
     </section>
 
-    <section id="services" class="py-12 text-center bg-gray-300 dark:bg-gray-700">
-      <h2 class="text-3xl font-playfair font-semibold mb-5">Our Services</h2>
-      <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="service bg-white dark:bg-gray-700 p-8 rounded-lg shadow transform transition-transform hover:scale-105">
-          <i class="fas fa-hand-holding-heart service-icon mb-5 text-yellow-600"></i>
-          <h3 class="text-2xl font-playfair font-semibold mb-3">Swedish Massage</h3>
-          <p class="text-base text-gray-700 dark:text-gray-300 mb-3">Gentle, flowing strokes for relaxation and stress relief.</p>
-          <p class="text-lg font-bold text-gray-800 dark:text-gray-100">60 minutes - $80<br>90 minutes - $120</p>
+      <section id="services" class="py-12 text-center bg-gray-300 dark:bg-gray-700">
+        <h2 class="text-3xl font-playfair font-semibold mb-8">Our Services</h2>
+        <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Swedish Massage Card -->
+        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#555]">
+            <div class="overflow-hidden rounded-t-lg">
+              <img src="images/swedish.jpg" alt="Swedish Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out">
+            </div>
+          </div>
+          <div class="px-6 pb-4 pt-8 text-center flex-grow">
+            <div class="flex items-center justify-center mb-2.5">
+              <i class="fas fa-hand-holding-heart service-icon text-yellow-600 text-xl mr-3"></i>
+              <h3 class="text-[28px] font-playfair font-semibold">Swedish Massage</h3>
+            </div>
+            <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Gentle, flowing strokes for relaxation and stress relief.</p>
+          </div>
+          <div class="border-t border-[#555] p-4 mt-auto">
+            <!-- Footer content here -->
+          </div>
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-8 rounded-lg shadow transform transition-transform hover:scale-105">
-          <i class="fas fa-baby service-icon mb-5 text-yellow-600"></i>
-          <h3 class="text-2xl font-playfair font-semibold mb-3">Prenatal Massage</h3>
-          <p class="text-base text-gray-700 dark:text-gray-300 mb-3">Specialized care for expectant mothers, promoting comfort and well-being.</p>
-          <p class="text-lg font-bold text-gray-800 dark:text-gray-100">60 minutes - $80<br>90 minutes - $120</p>
+        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="border-b border-[#555]">
+          <div class="overflow-hidden rounded-t-lg">
+            <img src="images/prenatal.jpg" alt="Prenatal Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-110">
+          </div>
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-8 rounded-lg shadow transform transition-transform hover:scale-105">
-          <i class="fas fa-crosshairs service-icon mb-5 text-yellow-600"></i>
-          <h3 class="text-2xl font-playfair font-semibold mb-3">Trigger Point</h3>
-          <p class="text-base text-gray-700 dark:text-gray-300 mb-3">Focused pressure on specific points to relieve muscle tension and pain.</p>
-          <p class="text-lg font-bold text-gray-800 dark:text-gray-100">60 minutes - $80<br>90 minutes - $120</p>
+        <div class="px-6 pb-4 pt-8 text-center flex-grow">
+          <div class="flex items-center justify-center mb-2.5">
+            <i class="fas fa-baby service-icon text-yellow-600 text-xl mr-3"></i>
+            <h3 class="text-[28px] font-playfair font-semibold">Prenatal Massage</h3>
+          </div>
+          <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Specialized care for expectant mothers, promoting comfort and well-being.</p>
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-          <h3 class="text-2xl font-playfair mb-2">Chair Massage</h3>
-          <p class="mb-2">Quick, convenient massage for relaxation and stress relief.</p>
-          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        <div class="border-t border-[#555] p-4 mt-auto">
+          <!-- Footer content here -->
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-          <h3 class="text-2xl font-playfair mb-2">Russian Massage</h3>
-          <p class="mb-2">Unique techniques to improve circulation and reduce muscle tension.</p>
-          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+      </div>
+        <!-- Trigger Point Massage Card -->
+        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#555]">
+            <div class="overflow-hidden rounded-t-lg">
+              <img src="images/trigger-point.jpg" alt="Trigger Point"class="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-110">
+            </div>
+          </div>
+          <div class="px-6 pb-4 pt-8 text-center flex-grow">
+            <div class="flex items-center justify-center mb-2.5">
+              <i class="fas fa-crosshairs service-icon text-yellow-600 text-xl mr-3"></i>
+              <h3 class="text-[28px] font-playfair font-semibold">Trigger Point</h3>
+            </div>
+            <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Focused pressure on specific points to relieve muscle tension and pain.</p>
+          </div>
+          <div class="border-t border-[#555] p-4 mt-auto">
+            <!-- Footer content here -->
+          </div>
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-          <h3 class="text-2xl font-playfair mb-2">Shiatsu</h3>
-          <p class="mb-2">Japanese technique using finger pressure to improve energy flow.</p>
-          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        <!-- Russian Massage Card -->
+        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#555]">
+            <div class="overflow-hidden rounded-t-lg">
+              <img src="images/russian.jpg" alt="Russian Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out scale-[1] russian-object-position hover:scale-[1.10]">
+            </div>
+          </div>
+          <div class="px-6 pb-4 pt-8 text-center flex-grow">
+            <div class="flex items-center justify-center mb-2.5">
+              <i class="fas fa-dumbbell service-icon text-yellow-600 text-xl mr-3"></i>
+              <h3 class="text-[28px] font-playfair font-semibold">Russian Massage</h3>
+            </div>
+            <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Unique techniques to improve circulation and reduce muscle tension.</p>
+          </div>
+          <div class="border-t border-[#555] p-4 mt-auto">
+            <!-- Footer content here -->
+          </div>
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-          <h3 class="text-2xl font-playfair mb-2">Thai Massage</h3>
-          <p class="mb-2">Combination of acupressure and assisted yoga postures.</p>
-          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        <!-- Shiatsu Massage Card -->
+        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#555]">
+            <div class="overflow-hidden rounded-t-lg">
+              <img src="images/shiatsu.jpg" alt="Shiatsu Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out scale-[1.5] shiatsu-object-position hover:scale-[1.6]">
+            </div>
+          </div>
+          <div class="px-6 pb-4 pt-8 text-center flex-grow">
+            <div class="flex items-center justify-center mb-2.5">
+              <i class="fas fa-spa service-icon text-yellow-600 text-xl mr-3"></i>
+              <h3 class="text-[28px] font-playfair font-semibold">Shiatsu</h3>
+            </div>
+            <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Japanese technique using finger pressure to improve energy flow.</p>
+          </div>
+          <div class="border-t border-[#555] p-4 mt-auto">
+            <!-- Footer content here -->
+          </div>
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-          <h3 class="text-2xl font-playfair mb-2">Lymphatic Drainage</h3>
-          <p class="mb-2">Gentle technique to stimulate the lymphatic system and reduce swelling.</p>
-          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
+        <!-- Lymphatic Drainage Massage Card -->
+        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#555]">
+            <div class="overflow-hidden rounded-t-lg">
+              <img src="images/lymphatic.jpg" alt="Lymphatic Drainage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out scale-[1.8] lymphatic-object-position hover:scale-[1.9]">
+            </div>
+          </div>
+          <div class="px-6 pb-4 pt-8 text-center flex-grow">
+            <div class="flex items-center justify-center mb-2.5">
+              <i class="fas fa-tint service-icon text-yellow-600 text-xl mr-3"></i>
+              <h3 class="text-[28px] font-playfair font-semibold">Lymphatic Drainage</h3>
+            </div>
+            <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Gentle technique to stimulate the lymphatic system and reduce swelling.</p>
+          </div>
+          <div class="border-t border-[#555] p-4 mt-auto">
+            <!-- Footer content here -->
+          </div>
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-          <h3 class="text-2xl font-playfair mb-2">Sports Massage</h3>
-          <p class="mb-2">Targeted techniques to improve athletic performance and recovery.</p>
-          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-        </div>
-        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-          <h3 class="text-2xl font-playfair mb-2">Reflexology</h3>
-          <p class="mb-2">Application of pressure to specific points on the feet to improve health.</p>
-          <p class="text-lg">60 minutes - $80<br>90 minutes - $120</p>
-        </div>
-        <div class="service bg-white dark:bg-gray-700 p-5 rounded-lg shadow">
-          <h3 class="text-2xl font-playfair mb-2">Deep Tissue Massage</h3>
-          <p class="mb-2">Intense massage focusing on deeper layers of muscle tissue.</p>
-          <p class="text-lg">60 minutes - $95<br>90 minutes - $135</p>
+        <!-- Reflexology Massage Card -->
+        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#555]">
+            <div class="overflow-hidden rounded-t-lg">
+              <img src="images/reflexology-2.jpg" alt="Reflexology" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out transform reflexology-object-position hover:scale-110">
+            </div>
+          </div>
+          <div class="px-6 pb-4 pt-8 text-center flex-grow">
+            <div class="flex items-center justify-center mb-2.5">
+              <i class="fas fa-running service-icon text-yellow-600 text-xl mr-3"></i>
+              <h3 class="text-[28px] font-playfair font-semibold">Reflexology</h3>
+            </div>
+            <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Application of pressure to specific points on the feet to improve health.</p>
+          </div>
+          <div class="border-t border-[#555] p-4 mt-auto">
+            <!-- Footer content here -->
+          </div>
         </div>
       </div>
     </section>
+
+    <section><h2>Customization Here</h2></section>
 `
 
         <section id="memberships" class="py-12 text-center bg-gray-400 dark:bg-gray-600">
           <h2 class="text-3xl font-playfair font-semibold mb-5">Membership Benefits</h2>
           <div class="membership-benefits max-w-lg mx-auto text-left text-lg text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
             <div class="benefit-item flex items-center mb-4">
-              <img src="images/discount-icon.svg" alt="Discount Icon" class="benefit-icon mr-3">
+              <img src="images/discount-icon.svg" alt="Discount Icon" class="benefit-icon filter invert h-12 mr-4">
               <p><strong>Save on Every Session:</strong> Enjoy a 10% discount on all 60-minute sessions and a 15% discount on 90-minute sessions.</p>
             </div>
             <div class="benefit-item flex items-center mb-4">
-              <img src="images/birthday-icon.svg" alt="Birthday Icon" class="benefit-icon mr-3">
+              <img src="images/birthday-icon.svg" alt="Birthday Icon" class="benefit-icon filter invert h-12 mr-4">
               <p><strong>Celebrate with Us:</strong> Receive a complimentary massage on your birthday.</p>
             </div>
             <div class="benefit-item flex items-center mb-4">
-              <img src="images/friend-icon.svg" alt="Share with a Friend Icon" class="benefit-icon mr-3">
+              <img src="images/friend-icon.svg" alt="Share with a Friend Icon" class="benefit-icon filter invert h-12 mr-4">
               <p><strong>Bring a Friend:</strong> Share your membership benefits with a friend for a special shared experience.</p>
             </div>
             <div class="benefit-item flex items-center mb-4">
-              <img src="images/additional-discount-icon.svg" alt="Additional Discounts Icon" class="benefit-icon mr-3">
+              <img src="images/additional-discount-icon.svg" alt="Additional Discounts Icon" class="benefit-icon filter invert h-12 mr-4">
               <p><strong>Additional Discounts:</strong> Get exclusive discounts on additional services and treatments.</p>
             </div>
             <div class="benefit-item flex items-center mb-4">
-              <img src="images/priority-booking-icon.svg" alt="Priority Booking Icon" class="benefit-icon mr-3">
+              <img src="images/priority-booking-icon.svg" alt="Priority Booking Icon" class="benefit-ico filter invert h-10 mr-4">
               <p><strong>Priority Booking:</strong> Members get priority access to appointment slots, ensuring you never miss out on your preferred time.</p>
             </div>
           </div>
-          <a href="#" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5 mt-5">Join Now</a>
+          <a href="#" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner transition-transform transform hover:-translate-y-0.5 mt-5">Join Now</a>
         </section>
 
         <section id="testimonials" class="py-12 text-center bg-gray-500 dark:bg-gray-500">
@@ -240,14 +293,14 @@
         </section>
 
         <section id="book-now" class="py-12 text-center bg-gray-600 dark:bg-gray-400">
-          <h2 class="text-3xl font-playfair font-semibold mb-5">Book Your Appointment</h2>
+          <h2 class="text-3xl font-playfair font-semibold mb-8">Book Your Appointment</h2>
           <p class="text-lg mb-5">Schedule your session easily with our online booking system.</p>
           <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-username" style="min-width:320px;height:630px;"></div>
           <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </section>
 
         <section id="contact" class="py-12 text-center bg-gray-600 dark:bg-gray-400">
-          <h2 class="text-3xl font-playfair font-semibold mb-5">Contact Us</h2>
+          <h2 class="text-3xl font-playfair font-semibold mb-8">Contact Us</h2>
           <form id="contact-form" class="max-w-xl mx-auto text-left">
             <label for="name" class="block text-lg mb-1">Name:</label>
             <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
@@ -414,7 +467,7 @@
         currentConfig = (currentConfig === particleOneConfig) ? particleTwoConfig : particleOneConfig;
         currentParticle = (currentParticle === 'One') ? 'Two' : 'One';
         particlesJS('particles-js', currentConfig);
-        document.getElementById('toggle-particles').innerText = `Toggle to Particle ${currentParticle}`;
+        document.getElementById('toggle-particles').innerText = `Interactive Particle Pattern ${currentParticle}`;
       });
 
       // Update particle position based on touch/mouse movement
@@ -447,5 +500,9 @@
             });
         });
     </script>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>

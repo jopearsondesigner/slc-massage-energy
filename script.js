@@ -22,3 +22,30 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("dark-mode");
   document.getElementById("theme-icon").src = "images/sun-icon.svg";
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Ensure DOM is loaded
+  const galleryItems = document.querySelectorAll(".gallery-item a");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeLightbox = document.getElementById("close-lightbox");
+
+  galleryItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      lightboxImg.src = item.href;
+      lightboxImg.alt = item.dataset.title;
+      lightbox.classList.remove("hidden");
+    });
+  });
+
+  closeLightbox.addEventListener("click", () => {
+    lightbox.classList.add("hidden");
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      lightbox.classList.add("hidden");
+    }
+  });
+});
