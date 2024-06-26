@@ -1,15 +1,55 @@
 module.exports = {
-  content: [
-    "./index.html",
-    "./script.js",
-    "./**/*.{html,js}", // Adjust path if necessary
-  ],
-  darkMode: "class", // Use class-based dark mode
+  content: ["./index.html", "./script.js", "./**/*.{html,js}"],
+  darkMode: "class",
   theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
+    extend: {
+      colors: {
+        richBlack: "#0D0D0D",
+        jetBlack: "#1A1A1A",
+        charcoal: "#333333",
+        darkGray: "#4D4D4D",
+        ivory: "#FFFFF0",
+        paleGold: "#E6D8AC",
+        lightBeige: "#F5F5DC",
+        softTaupe: "#D8CFC4",
+        deepBlue: "#003366",
+        burgundy: "#800020",
+        emeraldGreen: "#50C878",
+        charcoalGray: "#36454F",
+        gold: "#FFD700",
+      },
+      keyframes: {
+        blowUpIcon: {
+          "0%, 100%": { transform: "scale(1)" },
+          "20%": { transform: "scale(1.5)" },
+          "40%": { transform: "scale(0.7)" },
+          "60%": { transform: "scale(1.1)" },
+          "80%": { transform: "scale(0.95)" },
+        },
+        blowUpText: {
+          "0%, 100%": { transform: "scale(1)" },
+          "20%": { transform: "scale(1.3)" },
+          "40%": { transform: "scale(0.95)" },
+          "60%": { transform: "scale(1.05)" },
+          "80%": { transform: "scale(1)" },
+        },
+        bounce: {
+          "0%": { transform: "translateY(0)" },
+          "20%": { transform: "translateY(-30px)" },
+          "40%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
+          "60%": { transform: "translateY(0)" },
+          "70%": { transform: "translateY(-7px)" },
+          "80%": { transform: "translateY(0)" },
+          "90%": { transform: "translateY(-3px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        blowUpIcon: "blowUpIcon 0.6s forwards, bounce 0.6s forwards",
+        blowUpText: "blowUpText 0.6s forwards, bounce 0.6s forwards",
+      },
+    },
   },
   plugins: [],
 };

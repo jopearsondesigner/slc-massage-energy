@@ -8,9 +8,10 @@
   <title>SLC Massage & Energy | Healing Touch. Renewed Energy.</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
 
@@ -30,7 +31,7 @@
   </style>
 </head>
 
-<body class="dark:bg-gray-900 dark:text-gray-200 text-gray-800">
+<body class="dark:bg-rich-black dark:text-gray-200 text-gray-800">
   <header>
     <nav class="flex flex-col items-start fixed top-[-4px] right-[-4px] lg:top-2 lg:right-2 z-50 gap-2">
       <div class="menu-toggle cursor-pointer px-[6px] py-[9px] lg:px-[10.5px] lg:py-[13px] rounded" onclick="toggleMenu()">
@@ -55,18 +56,19 @@
         </a>
       </div>
     </nav>
-    <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50 z-5" onclick="toggleMenu()"></div>
-    <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-black bg-opacity-90 flex flex-col justify-center items-center transition-all duration-300 z-10">
+    <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50 z-10" onclick="toggleMenu()"></div>
+    <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-rich-black bg-opacity-90 flex flex-col justify-center items-center transition-all duration-300 z-10">
       <li class="my-5"><a href="/" class="text-yellow-600 hover:text-yellow-700">Home</a></li>
       <li class="my-5"><a href="#about" class="text-yellow-600 hover:text-yellow-700">About</a></li>
       <li class="my-5"><a href="#services" class="text-yellow-600 hover:text-yellow-700">Services</a></li>
       <li class="my-5"><a href="#memberships" class="text-yellow-600 hover:text-yellow-700">Memberships</a></li>
       <li class="my-5"><a href="#contact" class="text-yellow-600 hover:text-yellow-700">Contact</a></li>
-      <li class="my-5"><a href="#book-now" class="book-now small text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-4 py-2 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Book Now</a></li>
+      <li class="my-5"><a href="#book-now" class="book-now small text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-4 py-2 rounded shadow-inner transition-transform transform hover:-translate-y-0.5">Book Now</a></li>
     </ul>
   </header>
+
   <main>
-    <section id="hero" class="relative bg-gray-transparent text-white">
+    <section id="hero" class="relative bg-transparent text-white">
       <div class="parallax relative h-screen overflow-hidden">
         <div class="video-container absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
           <video autoplay muted loop playsinline id="bg-video" poster="images/fallback.jpg" class="absolute top-0 left-0 w-full h-full object-cover -z-10">
@@ -84,31 +86,45 @@
       </div>
     </section>
 
-    <section class="text-center py-4 bg-gray-400 dark:bg-gray-900">
+    <section class="text-center py-4 bg-light-beige dark:bg-dark-gray">
       <button id="toggle-particles" class="text-[16px] text-blue-600 border border-blue-600 px-2 py-1 rounded-md hover:bg-blue-600 hover:text-white transition ease-in duration-300">Interactive Particle Pattern Two</button>
       <p class="mt-2.5 text-[14px] text-gray-700">Click the button to switch between different particle interactions.</p>
     </section>
 
-    <section id="gallery" class="py-12 text-center bg-gray-100 dark:bg-gray-900">
-      <h2 class="text-3xl font-playfair font-semibold mb-8">Our Gallery</h2>
-      <div class="gallery-grid max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <div class="gallery-item relative overflow-hidden">
-          <a href="images/image-1.jpg" data-lightbox="gallery" data-title="Relaxing Atmosphere">
-            <img src="images/image-1.jpg" alt="Image 1" class="gallery-image">
-          </a>
-          <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-            <p class="text-white text-sm font-semibold">Relaxing Atmosphere</p>
+    <section id="gallery" class="py-12 bg-soft-taupe dark:bg-charcoal">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-playfair font-semibold text-center mb-12">Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/image-1.jpg" alt="Gallery Image 1" class="gallery-image">
+            <div class="overlay">
+              <span class="text-white text-sm">Relaxing Space</span>
+            </div>
           </div>
+          <div class="gallery-item">
+            <img src="images/image-2.jpg" alt="Gallery Image 2" class="gallery-image">
+            <div class="overlay">
+              <span class="text-white text-sm">Tranquil Environment</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/image-3.jpg" alt="Gallery Image 3" class="gallery-image">
+            <div class="overlay">
+              <span class="text-white text-sm">Serene Ambiance</span>
+            </div>
+          </div>
+          <!-- Add more gallery items as needed -->
         </div>
+      </div>
 
-        <!-- <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center">
-          <img id="lightbox-img" src="" alt="" class="max-h-full max-w-full">
-          <span id="close-lightbox" class="absolute top-2 right-2 text-white text-2xl cursor-pointer">&times;</span>
-        </div> -->
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="hidden">
+        <span id="close-lightbox" class="text-white text-4xl">&times;</span>
+        <img id="lightbox-img" src="images/image-3.jpg" alt="Lightbox Image">
       </div>
     </section>
-    <section id="about" class="py-12 text-center bg-gray-200 dark:bg-gray-800">
+
+    <section id="about" class="py-12 text-center bg-pale-gold dark:bg-charcoal">
       <div class="about-content max-w-3xl mx-auto">
         <h2 class="text-3xl font-playfair font-semibold mb-8">Meet Your Therapist <span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span><span class="text-lg p-[1px]">💕</span></h2>
         <img src="images/sunny-headshot-1.png" alt="Therapist Headshot" class="therapist-headshot w-[20rem] h-[20rem] rounded-full mx-auto mb-5">
@@ -117,12 +133,12 @@
       </div>
     </section>
 
-      <section id="services" class="py-12 text-center bg-gray-300 dark:bg-gray-700">
-        <h2 class="text-3xl font-playfair font-semibold mb-8">Our Services</h2>
-        <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <section id="services" class="py-12 text-center bg-light-beige dark:bg-charcoal">
+      <h2 class="text-3xl font-playfair font-semibold mb-8">Our Services</h2>
+      <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Swedish Massage Card -->
-        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
-          <div class="border-b border-[#555]">
+        <div class="service bg-white dark:bg-dark-gray p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#CCC] dark:border-[#555]">
             <div class="overflow-hidden rounded-t-lg">
               <img src="images/swedish.jpg" alt="Swedish Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out">
             </div>
@@ -134,30 +150,30 @@
             </div>
             <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Gentle, flowing strokes for relaxation and stress relief.</p>
           </div>
-          <div class="border-t border-[#555] p-4 mt-auto">
+          <div class="border-t border-[#CCC] dark:border-[#555] p-4 mt-auto">
             <!-- Footer content here -->
           </div>
         </div>
-        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
-        <div class="border-b border-[#555]">
-          <div class="overflow-hidden rounded-t-lg">
-            <img src="images/prenatal.jpg" alt="Prenatal Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-110">
+        <div class="service bg-white dark:bg-dark-gray p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#CCC] dark:border-[#555]">
+            <div class="overflow-hidden rounded-t-lg">
+              <img src="images/prenatal.jpg" alt="Prenatal Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-110">
+            </div>
+          </div>
+          <div class="px-6 pb-4 pt-8 text-center flex-grow">
+            <div class="flex items-center justify-center mb-2.5">
+              <i class="fas fa-baby service-icon text-yellow-600 text-xl mr-3"></i>
+              <h3 class="text-[28px] font-playfair font-semibold">Prenatal Massage</h3>
+            </div>
+            <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Specialized care for expectant mothers, promoting comfort and well-being.</p>
+          </div>
+          <div class="border-t border-[#CCC] dark:border-[#555] p-4 mt-auto">
+            <!-- Footer content here -->
           </div>
         </div>
-        <div class="px-6 pb-4 pt-8 text-center flex-grow">
-          <div class="flex items-center justify-center mb-2.5">
-            <i class="fas fa-baby service-icon text-yellow-600 text-xl mr-3"></i>
-            <h3 class="text-[28px] font-playfair font-semibold">Prenatal Massage</h3>
-          </div>
-          <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Specialized care for expectant mothers, promoting comfort and well-being.</p>
-        </div>
-        <div class="border-t border-[#555] p-4 mt-auto">
-          <!-- Footer content here -->
-        </div>
-      </div>
         <!-- Trigger Point Massage Card -->
-        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
-          <div class="border-b border-[#555]">
+        <div class="service bg-white dark:bg-dark-gray p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#CCC] dark:border-[#555]">
             <div class="overflow-hidden rounded-t-lg">
               <img src="images/trigger-point.jpg" alt="Trigger Point"class="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-110">
             </div>
@@ -169,13 +185,13 @@
             </div>
             <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Focused pressure on specific points to relieve muscle tension and pain.</p>
           </div>
-          <div class="border-t border-[#555] p-4 mt-auto">
+          <div class="border-t border-[#CCC] dark:border-[#555] p-4 mt-auto">
             <!-- Footer content here -->
           </div>
         </div>
         <!-- Russian Massage Card -->
-        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
-          <div class="border-b border-[#555]">
+        <div class="service bg-white dark:bg-dark-gray p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#CCC] dark:border-[#555]">
             <div class="overflow-hidden rounded-t-lg">
               <img src="images/russian.jpg" alt="Russian Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out scale-[1] russian-object-position hover:scale-[1.10]">
             </div>
@@ -187,13 +203,13 @@
             </div>
             <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Unique techniques to improve circulation and reduce muscle tension.</p>
           </div>
-          <div class="border-t border-[#555] p-4 mt-auto">
+          <div class="border-t border-[#CCC] dark:border-[#555] p-4 mt-auto">
             <!-- Footer content here -->
           </div>
         </div>
         <!-- Shiatsu Massage Card -->
-        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
-          <div class="border-b border-[#555]">
+        <div class="service bg-white dark:bg-dark-gray p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#CCC] dark:border-[#555]">
             <div class="overflow-hidden rounded-t-lg">
               <img src="images/shiatsu.jpg" alt="Shiatsu Massage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out scale-[1.5] shiatsu-object-position hover:scale-[1.6]">
             </div>
@@ -205,13 +221,13 @@
             </div>
             <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Japanese technique using finger pressure to improve energy flow.</p>
           </div>
-          <div class="border-t border-[#555] p-4 mt-auto">
+          <div class="border-t border-[#CCC] dark:border-[#555] p-4 mt-auto">
             <!-- Footer content here -->
           </div>
         </div>
         <!-- Lymphatic Drainage Massage Card -->
-        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
-          <div class="border-b border-[#555]">
+        <div class="service bg-white dark:bg-dark-gray p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#CCC] dark:border-[#555]">
             <div class="overflow-hidden rounded-t-lg">
               <img src="images/lymphatic.jpg" alt="Lymphatic Drainage" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out scale-[1.8] lymphatic-object-position hover:scale-[1.9]">
             </div>
@@ -223,13 +239,13 @@
             </div>
             <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Gentle technique to stimulate the lymphatic system and reduce swelling.</p>
           </div>
-          <div class="border-t border-[#555] p-4 mt-auto">
+          <div class="border-t border-[#CCC] dark:border-[#555] p-4 mt-auto">
             <!-- Footer content here -->
           </div>
         </div>
         <!-- Reflexology Massage Card -->
-        <div class="service bg-white dark:bg-gray-700 p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
-          <div class="border-b border-[#555]">
+        <div class="service bg-white dark:bg-dark-gray p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
+          <div class="border-b border-[#CCC] dark:border-[#555]">
             <div class="overflow-hidden rounded-t-lg">
               <img src="images/reflexology-2.jpg" alt="Reflexology" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out transform reflexology-object-position hover:scale-110">
             </div>
@@ -241,268 +257,271 @@
             </div>
             <p class="text-md text-gray-700 dark:text-gray-300 leading-relaxed">Application of pressure to specific points on the feet to improve health.</p>
           </div>
-          <div class="border-t border-[#555] p-4 mt-auto">
+          <div class="border-t border-[#CCC] dark:border-[#555] p-4 mt-auto">
             <!-- Footer content here -->
           </div>
         </div>
       </div>
     </section>
 
-    <section><h2>Customization Here</h2></section>
-`
+    <section><p><i>(Customization Here)</i></p></section>
 
-        <section id="memberships" class="py-12 text-center bg-gray-400 dark:bg-gray-600">
-          <h2 class="text-3xl font-playfair font-semibold mb-5">Membership Benefits</h2>
-          <div class="membership-benefits max-w-lg mx-auto text-left text-lg text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-            <div class="benefit-item flex items-center mb-4">
-              <img src="images/discount-icon.svg" alt="Discount Icon" class="benefit-icon filter invert h-12 mr-4">
-              <p><strong>Save on Every Session:</strong> Enjoy a 10% discount on all 60-minute sessions and a 15% discount on 90-minute sessions.</p>
-            </div>
-            <div class="benefit-item flex items-center mb-4">
-              <img src="images/birthday-icon.svg" alt="Birthday Icon" class="benefit-icon filter invert h-12 mr-4">
-              <p><strong>Celebrate with Us:</strong> Receive a complimentary massage on your birthday.</p>
-            </div>
-            <div class="benefit-item flex items-center mb-4">
-              <img src="images/friend-icon.svg" alt="Share with a Friend Icon" class="benefit-icon filter invert h-12 mr-4">
-              <p><strong>Bring a Friend:</strong> Share your membership benefits with a friend for a special shared experience.</p>
-            </div>
-            <div class="benefit-item flex items-center mb-4">
-              <img src="images/additional-discount-icon.svg" alt="Additional Discounts Icon" class="benefit-icon filter invert h-12 mr-4">
-              <p><strong>Additional Discounts:</strong> Get exclusive discounts on additional services and treatments.</p>
-            </div>
-            <div class="benefit-item flex items-center mb-4">
-              <img src="images/priority-booking-icon.svg" alt="Priority Booking Icon" class="benefit-ico filter invert h-10 mr-4">
-              <p><strong>Priority Booking:</strong> Members get priority access to appointment slots, ensuring you never miss out on your preferred time.</p>
-            </div>
+    <section id="memberships" class="py-12 text-center bg-light-beige dark:bg-rich-black">
+      <h2 class="text-3xl font-playfair font-semibold mb-5 text-emerald-green">Membership Benefits</h2>
+      <div class="membership-benefits max-w-lg mx-auto text-left text-lg text-gray-800 dark:text-gray-200 bg-ivory dark:bg-richBlack p-6 rounded-lg shadow-lg">
+        <div class="benefit-item flex items-center mb-4 staggered right" data-animation="right" style="animation-delay: 0s;">
+          <div class="icon-text-group">
+            <i class="fas fa-percentage benefit-icon discount-icon"></i>
+            <p><strong class="text-rich-navy">Save on Every Session:</strong> Enjoy a 10% discount on all 60-minute sessions and a 15% discount on 90-minute sessions.</p>
           </div>
-          <a href="#" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner transition-transform transform hover:-translate-y-0.5 mt-5">Join Now</a>
-        </section>
-
-        <section id="testimonials" class="py-12 text-center bg-gray-500 dark:bg-gray-500">
-          <div class="testimonials-background relative">
-            <img src="https://via.placeholder.com/1500x800" alt="Testimonials Background" class="background-image absolute inset-0 w-full h-full object-cover opacity-20">
-            <div class="testimonials-content relative z-10">
-              <h2 class="text-3xl font-playfair font-semibold mb-5">Testimonials</h2>
-              <div class="testimonial-item bg-white dark:bg-gray-700 p-5 rounded-lg shadow mb-5">
-                <p class="text-lg">"The best massage therapy I've ever experienced. Truly transformative!"</p>
-                <p class="author font-bold text-sm mt-2">- Jane Doe</p>
-              </div>
-              <!-- Add more testimonials as needed -->
-            </div>
+        </div>
+        <div class="benefit-item flex items-center mb-4 staggered left" data-animation="left" style="animation-delay: 0.2s;">
+          <div class="icon-text-group">
+            <i class="fas fa-birthday-cake benefit-icon birthday-icon"></i>
+            <p><strong class="text-rich-navy">Celebrate with Us:</strong> Receive a complimentary massage on your birthday.</p>
           </div>
-        </section>
-
-        <section id="book-now" class="py-12 text-center bg-gray-600 dark:bg-gray-400">
-          <h2 class="text-3xl font-playfair font-semibold mb-8">Book Your Appointment</h2>
-          <p class="text-lg mb-5">Schedule your session easily with our online booking system.</p>
-          <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-username" style="min-width:320px;height:630px;"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        </section>
-
-        <section id="contact" class="py-12 text-center bg-gray-600 dark:bg-gray-400">
-          <h2 class="text-3xl font-playfair font-semibold mb-8">Contact Us</h2>
-          <form id="contact-form" class="max-w-xl mx-auto text-left">
-            <label for="name" class="block text-lg mb-1">Name:</label>
-            <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
-
-            <label for="email" class="block text-lg mb-1">Email:</label>
-            <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500">
-
-            <label for="message" class="block text-lg mb-1">Message:</label>
-            <textarea id="message" name="message" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-500"></textarea>
-
-            <button type="submit" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner shadow-black transition-transform transform hover:-translate-y-0.5">Send Message</button>
-          </form>
-          <p class="text-lg mt-5">Phone: [Your Partner's Phone Number]</p>
-          <p class="text-lg">Email: [Your Partner's Email Address]</p>
-          <div id="social-media-links" class="flex justify-center gap-5 mt-5">
-            <!-- Social media links -->
+        </div>
+        <div class="benefit-item flex items-center mb-4 staggered right" data-animation="right" style="animation-delay: 0.4s;">
+          <div class="icon-text-group">
+            <i class="fas fa-user-friends benefit-icon friend-icon"></i>
+            <p><strong class="text-rich-navy">Bring a Friend:</strong> Share your membership benefits with a friend for a special shared experience.</p>
           </div>
-        </section>
-      </main>
+        </div>
+        <div class="benefit-item flex items-center mb-4 staggered left" data-animation="left" style="animation-delay: 0.6s;">
+          <div class="icon-text-group">
+            <i class="fas fa-tags benefit-icon additional-discount-icon"></i>
+            <p><strong class="text-rich-navy">Additional Discounts:</strong> Get exclusive discounts on additional services and treatments.</p>
+          </div>
+        </div>
+        <div class="benefit-item flex items-center mb-4 staggered right" data-animation="right" style="animation-delay: 0.8s;">
+          <div class="icon-text-group">
+            <i class="fas fa-calendar-alt benefit-icon priority-booking-icon"></i>
+            <p><strong class="text-rich-navy">Priority Booking:</strong> Members get priority access to appointment slots, ensuring you never miss out on your preferred time.</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded shadow-inner transition-transform transform hover:-translate-y-0.5 mt-5">Join Now</a>
+    </section>
 
-      <footer class="bg-black text-white p-5 text-center">
-        <p class="text-sm">&copy; 2024 SLC Massage & Energy</p>
-      </footer>
+    <section id="testimonials" class="py-12 text-center bg-light-beige dark:bg-dark-gray">
+      <h2 class="text-3xl font-playfair font-semibold mb-5">Testimonials</h2>
+      <div class="testimonials-background relative">
+        <img src="https://via.placeholder.com/1500x800" alt="Testimonials Background" class="background-image absolute inset-0 w-full h-full object-cover opacity-20">
+        <div class="testimonials-content relative z-10">
+          <div class="testimonial-item bg-white dark:bg-dark-gray p-5 rounded-lg shadow mb-5">
+            <p class="text-lg dark:text-gray-200">"The best massage therapy I've ever experienced. Truly transformative!"</p>
+            <p class="author font-bold text-sm mt-2 dark:text-gray-400">- Jane Doe</p>
+          </div>
+          <!-- Add more testimonials as needed -->
+          <div class="testimonial-item bg-white dark:bg-dark-gray p-5 rounded-lg shadow mb-5">
+            <p class="text-lg dark:text-gray-200">"The best massage therapy I've ever experienced. Truly transformative!"</p>
+            <p class="author font-bold text-sm mt-2 dark:text-gray-400">- Jane Doe</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-      const particleOneConfig = {
-        "particles": {
-          "number": {
-            "value": 80,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "circle",
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": false,
-          },
-          "size": {
-            "value": 3,
-            "random": true,
-          },
-          "line_linked": {
+
+    <section id="book-now" class="py-12 text-center bg-light-beige dark:bg-charcoal">
+      <h2 class="text-3xl font-playfair font-semibold mb-8">Book Your Appointment</h2>
+      <p><i>(ClinicSense code goes here)</i></p>
+    </section>
+
+    <section id="contact" class="py-12 text-center bg-light-beige dark:bg-charcoal">
+      <h2 class="text-3xl font-playfair font-semibold mb-8">Contact Us</h2>
+      <form id="contact-form" class="max-w-xl mx-auto text-left">
+        <label for="name" class="block text-lg mb-1">Name:</label>
+        <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-dark-gray dark:border-gray-500">
+
+        <label for="email" class="block text-lg mb-1">Email:</label>
+        <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-dark-gray dark:border-gray-500">
+
+        <label for="message" class="block text-lg mb-1">Message:</label>
+        <textarea id="message" name="message" required class="w-full p-2 mb-4 border border-gray-300 rounded dark:bg-dark-gray dark:border-gray-500"></textarea>
+
+        <button type="submit" class="book-now text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-6 py-3 rounded transition-transform transform hover:-translate-y-0.5">Send Message</button>
+      </form>
+      <p class="text-lg mt-5">Phone: [Your Partner's Phone Number]</p>
+      <p class="text-lg">Email: [Your Partner's Email Address]</p>
+      <div id="social-media-links" class="flex justify-center gap-5 mt-5">
+        <!-- Social media links -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-rich-black text-white p-5 text-center">
+    <p class="text-sm">&copy; 2024 SLC Massage & Energy</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    const particleOneConfig = {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
             "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 2,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
+            "value_area": 800
           }
         },
-        "retina_detect": true
-      };
-
-      const particleTwoConfig = {
-        "particles": {
-          "number": {
-            "value": 80,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "circle",
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": false,
-          },
-          "size": {
-            "value": 3,
-            "random": true,
-          },
-          "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 2,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": true,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
+        "color": {
+          "value": "#ffffff"
         },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "repulse"
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "push"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
-              }
-            },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
-            }
-          }
+        "shape": {
+          "type": "circle",
         },
-        "retina_detect": true
-      };
-
-      let currentConfig = particleOneConfig;
-      let currentParticle = 'One';
-
-      particlesJS('particles-js', currentConfig);
-
-      document.getElementById('toggle-particles').addEventListener('click', function () {
-        currentConfig = (currentConfig === particleOneConfig) ? particleTwoConfig : particleOneConfig;
-        currentParticle = (currentParticle === 'One') ? 'Two' : 'One';
-        particlesJS('particles-js', currentConfig);
-        document.getElementById('toggle-particles').innerText = `Interactive Particle Pattern ${currentParticle}`;
-      });
-
-      // Update particle position based on touch/mouse movement
-      function updateParticles(e) {
-        let posX, posY;
-        if (e.type === "mousemove") {
-          posX = e.clientX;
-          posY = e.clientY;
-        } else if (e.type === "touchmove") {
-          posX = e.touches[0].clientX;
-          posY = e.touches[0].clientY;
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
         }
+      },
+      "retina_detect": true
+    };
 
-        particlesJS.particles.interactivity.mouse.pos_x = posX;
-        particlesJS.particles.interactivity.mouse.pos_y = posY;
+    const particleTwoConfig = {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": true,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    };
+
+    let currentConfig = particleOneConfig;
+    let currentParticle = 'One';
+
+    particlesJS('particles-js', currentConfig);
+
+    document.getElementById('toggle-particles').addEventListener('click', function () {
+      currentConfig = (currentConfig === particleOneConfig) ? particleTwoConfig : particleOneConfig;
+      currentParticle = (currentParticle === 'One') ? 'Two' : 'One';
+      particlesJS('particles-js', currentConfig);
+      document.getElementById('toggle-particles').innerText = `Interactive Particle Pattern ${currentParticle}`;
+    });
+
+    // Update particle position based on touch/mouse movement
+    function updateParticles(e) {
+      let posX, posY;
+      if (e.type === "mousemove") {
+        posX = e.clientX;
+        posY = e.clientY;
+      } else if (e.type === "touchmove") {
+        posX = e.touches[0].clientX;
+        posY = e.touches[0].clientY;
       }
 
-      // Add event listeners for touch and mouse movements
-      document.getElementById('particles-js').addEventListener('mousemove', updateParticles);
-      document.getElementById('particles-js').addEventListener('touchmove', updateParticles);
-    </script>
-    <script>
-        $(document).ready(function(){
-            $('.testimonials-content').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                adaptiveHeight: true
-            });
-        });
-    </script>
+      particlesJS.particles.interactivity.mouse.pos_x = posX;
+      particlesJS.particles.interactivity.mouse.pos_y = posY;
+    }
+
+    // Add event listeners for touch and mouse movements
+    document.getElementById('particles-js').addEventListener('mousemove', updateParticles);
+    document.getElementById('particles-js').addEventListener('touchmove', updateParticles);
+  </script>
       <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-      <script src="https://cdn.tailwindcss.com"></script>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+      <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
 </body>
+
 </html>
