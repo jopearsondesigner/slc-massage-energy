@@ -12,44 +12,37 @@ module.exports = {
         paleGold: "#E6D8AC",
         lightBeige: "#F5F5DC",
         softTaupe: "#D8CFC4",
-        deepBlue: "#003366",
-        burgundy: "#800020",
+        vibrantBlue: "#007ACC", // Replacing deep blue
+        vibrantRed: "#FF4500", // Replacing burgundy
         emeraldGreen: "#50C878",
         charcoalGray: "#36454F",
         gold: "#FFD700",
       },
       keyframes: {
-        blowUpIcon: {
+        blowUp: {
           "0%, 100%": { transform: "scale(1)" },
-          "20%": { transform: "scale(1.5)" },
-          "40%": { transform: "scale(0.7)" },
-          "60%": { transform: "scale(1.1)" },
-          "80%": { transform: "scale(0.95)" },
-        },
-        blowUpText: {
-          "0%, 100%": { transform: "scale(1)" },
-          "20%": { transform: "scale(1.3)" },
-          "40%": { transform: "scale(0.95)" },
-          "60%": { transform: "scale(1.05)" },
-          "80%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.5)" },
         },
         bounce: {
-          "0%": { transform: "translateY(0)" },
-          "20%": { transform: "translateY(-30px)" },
-          "40%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-15px)" },
-          "60%": { transform: "translateY(0)" },
-          "70%": { transform: "translateY(-7px)" },
-          "80%": { transform: "translateY(0)" },
-          "90%": { transform: "translateY(-3px)" },
-          "100%": { transform: "translateY(0)" },
+          "0%, 100%, 20%, 50%, 80%": {
+            transform: "translateY(0)",
+          },
+          "40%": {
+            transform: "translateY(-30px)",
+          },
+          "60%": {
+            transform: "translateY(-15px)",
+          },
         },
       },
       animation: {
-        blowUpIcon: "blowUpIcon 0.6s forwards, bounce 0.6s forwards",
-        blowUpText: "blowUpText 0.6s forwards, bounce 0.6s forwards",
+        blowUp: "blowUp 1s ease-in-out infinite",
+        bounce: "bounce 1s ease-in-out infinite",
       },
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 };

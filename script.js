@@ -60,21 +60,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".benefit-item").forEach((group) => {
-    group.addEventListener("mouseover", () => {
-      const icon = group.querySelector(".benefit-icon");
-      const text = group.querySelector("p");
-      icon.classList.add("animate-blowUpIcon");
-      text.classList.add("animate-blowUpText");
-    });
+    const icon = group.querySelector(".benefit-icon");
+    const text = group.querySelector("p");
 
-    group.addEventListener("mouseleave", () => {
-      const icon = group.querySelector(".benefit-icon");
-      const text = group.querySelector("p");
-      icon.classList.remove("animate-blowUpIcon");
+    const addAnimations = () => {
+      icon.classList.add("animate-blowUpIcon", "animate-realisticBounce");
+      text.classList.add("animate-blowUpText");
+    };
+
+    const removeAnimations = () => {
+      icon.classList.remove("animate-blowUpIcon", "animate-realisticBounce");
       text.classList.remove("animate-blowUpText");
-    });
+    };
+
+    group.addEventListener("mouseover", addAnimations);
+    group.addEventListener("mouseleave", removeAnimations);
+
+    // For mobile touch events
+    group.addEventListener("touchstart", addAnimations);
+    group.addEventListener("touchend", removeAnimations);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const colors = ["#007ACC", "#FF4500", "#50C878"];
+  const icons = document.querySelectorAll(".benefit-icon");
+  const texts = document.querySelectorAll(".benefit-text");
+
+  icons.forEach((icon, index) => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    icon.style.color = randomColor;
+    if (texts[index]) {
+      texts[index].style.color = randomColor;
+    }
   });
 });

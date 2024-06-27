@@ -56,9 +56,21 @@
   color: #ffffff; /* For contrast */
 }
 
+/* Vibrant Blue */
+.vibrant-blue {
+  background-color: #007acc;
+  color: #ffffff; /* For contrast */
+}
+
 /* Burgundy */
 .burgundy {
   background-color: #800020;
+  color: #ffffff; /* For contrast */
+}
+
+/* Vibrant Red */
+.vibrant-red {
+  background-color: #ff4500;
   color: #ffffff; /* For contrast */
 }
 
@@ -627,33 +639,35 @@ body.dark-mode .service .border-t {
 /***** Memberships *****/
 
 .membership-benefits {
-  max-width: 600px;
+  max-width: 672px;
   margin: 0 auto;
   text-align: left;
-  padding: 20px;
-  background-color: #f5f5dc; /* light-beige */
+  padding: 24px;
+  background-color: #f5f5dc;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(13, 13, 13, 0.1);
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 10;
 }
 
 body.dark-mode .membership-benefits {
-  background-color: #1a1a1a; /* jet-black for dark mode */
+  background-color: #1a1a1a;
 }
 
 .benefit-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .staggered.right {
-  margin-right: 30px;
+  margin-right: 24px;
 }
 
 .staggered.left {
-  margin-left: 30px;
+  margin-left: 24px;
 }
 
 .icon-text-group {
@@ -664,35 +678,14 @@ body.dark-mode .membership-benefits {
 
 .benefit-icon {
   font-size: 2em;
-  margin-right: 20px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Icon Colors */
-.discount-icon {
-  color: #50c878; /* Emerald Green */
-}
-
-.birthday-icon {
-  color: #800020; /* Burgundy */
-}
-
-.friend-icon {
-  color: #50c878; /* Emerald Green */
-}
-
-.additional-discount-icon {
-  color: #003366; /* Deep Blue */
-}
-
-.priority-booking-icon {
-  color: #800020; /* Burgundy */
+  margin-right: 12px;
+  transition: transform 0.6s ease-in-out;
 }
 
 .benefit-item p {
-  font-size: 1.1rem; /* Adjusted text size */
-  transition: transform 0.3s ease-in-out;
-  color: #0d0d0d; /* Jet Black for body text in light mode */
+  font-size: 1.2rem;
+  transition: transform 0.6s ease-in-out;
+  color: #0d0d0d;
 }
 
 body.dark-mode .benefit-item p {
@@ -737,30 +730,36 @@ body.dark-mode .benefit-item p {
   }
 }
 
-@keyframes bounce {
+@keyframes realisticBounce {
   0% {
     transform: translateY(0);
   }
+  10% {
+    transform: translateY(-100px);
+  }
   20% {
-    transform: translateY(-30px);
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-50px);
   }
   40% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-25px);
   }
   60% {
     transform: translateY(0);
   }
   70% {
-    transform: translateY(-7px);
+    transform: translateY(-12.5px);
   }
   80% {
     transform: translateY(0);
   }
   90% {
-    transform: translateY(-3px);
+    transform: translateY(-6.25px);
   }
   100% {
     transform: translateY(0);
@@ -768,11 +767,58 @@ body.dark-mode .benefit-item p {
 }
 
 .benefit-item:hover .benefit-icon {
-  animation: blowUpIcon 0.6s forwards, bounce 0.6s forwards;
+  animation: blowUpIcon 0.6s forwards, realisticBounce 2s forwards;
 }
 
 .benefit-item:hover p {
-  animation: blowUpText 0.6s forwards, bounce 0.6s forwards;
+  animation: blowUpText 0.6s forwards;
+}
+
+/* Background Animation */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.background-animation::before,
+.background-animation::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 223, 0, 0.3); /* Light yellow shapes */
+  border-radius: 50%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.background-animation::before {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 20%;
+}
+
+.background-animation::after {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  right: 20%;
+  animation-duration: 6s;
 }
 
 /***** Contact Form *****/
