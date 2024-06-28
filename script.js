@@ -86,14 +86,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const colors = ["#007ACC", "#FF4500", "#50C878"];
-  const icons = document.querySelectorAll(".benefit-icon");
-  const texts = document.querySelectorAll(".benefit-text");
+  const items = document.querySelectorAll(".benefit-item");
 
-  icons.forEach((icon, index) => {
+  items.forEach((item) => {
+    const icon = item.querySelector(".benefit-icon");
+    const texts = item.querySelectorAll(".benefit-text");
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    icon.style.color = randomColor;
-    if (texts[index]) {
-      texts[index].style.color = randomColor;
+
+    if (icon) {
+      icon.style.color = randomColor;
     }
+
+    texts.forEach((text) => {
+      text.style.color = randomColor;
+    });
   });
 });

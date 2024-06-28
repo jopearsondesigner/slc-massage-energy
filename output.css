@@ -176,6 +176,10 @@ p {
   /* Jet Black for body text in light mode */
 }
 
+strong {
+  font-weight: bold !important;
+}
+
 header {
   padding: 0px;
 }
@@ -697,7 +701,7 @@ body.dark-mode .service .border-t {
   max-width: 672px;
   margin: 0 auto;
   text-align: left;
-  padding: 24px;
+  padding: 4rem 32px 24px;
   background-color: #f5f5dc;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(13, 13, 13, 0.1);
@@ -705,10 +709,16 @@ body.dark-mode .service .border-t {
   flex-direction: column;
   position: relative;
   z-index: 10;
+  font-weight: 200;
+}
+
+body.dark-mode #memberships {
+  background-color: #0d0d0d;
+  /*Rich Black*/
 }
 
 body.dark-mode .membership-benefits {
-  background-color: #1a1a1a;
+  background-color: rgba(26, 26, 26, 0.8);
 }
 
 .benefit-item {
@@ -718,11 +728,11 @@ body.dark-mode .membership-benefits {
 }
 
 .staggered.right {
-  margin-right: 24px;
+  margin-right: 32px;
 }
 
 .staggered.left {
-  margin-left: 24px;
+  margin-left: 32px;
 }
 
 .icon-text-group {
@@ -735,6 +745,11 @@ body.dark-mode .membership-benefits {
   font-size: 2em;
   margin-right: 12px;
   transition: transform 0.6s ease-in-out;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 100%;
 }
 
 .benefit-item p {
@@ -877,7 +892,7 @@ body.dark-mode .benefit-item p {
 .background-animation::after {
   content: "";
   position: absolute;
-  background: rgba(255, 223, 0, 0.3);
+  background: rgba(0, 122, 204, 1);
   /* Light yellow shapes */
   border-radius: 50%;
   animation: float 4s ease-in-out infinite;
