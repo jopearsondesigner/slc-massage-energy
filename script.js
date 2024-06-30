@@ -1,23 +1,12 @@
-$(document).ready(function () {
-  if ($(".testimonials-content").length) {
-    $(".testimonials-content").slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      adaptiveHeight: true,
-      autoplay: true,
-      autoplaySpeed: 3000, // Adjust the speed (in milliseconds) as needed
-    });
-  }
-});
-
 function toggleMenu() {
   const menu = document.querySelector(".nav-menu");
   const overlay = document.querySelector(".menu-overlay");
+  const menuToggle = document.querySelector(".menu-toggle");
+
   menu.classList.toggle("right-0");
   menu.classList.toggle("right-[-100%]");
   overlay.classList.toggle("hidden");
+  menuToggle.classList.toggle("active");
 }
 
 function toggleTheme() {
@@ -60,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".benefit-item").forEach((group) => {
     const icon = group.querySelector(".benefit-icon");
@@ -102,3 +92,193 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const particleOneConfig = {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: "#ffffff",
+    },
+    shape: {
+      type: "circle",
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+    },
+    size: {
+      value: 3,
+      random: true,
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1,
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+    },
+  },
+  retina_detect: true,
+};
+
+const particleTwoConfig = {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: "#ffffff",
+    },
+    shape: {
+      type: "circle",
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+    },
+    size: {
+      value: 3,
+      random: true,
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1,
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: true,
+        rotateX: 600,
+        rotateY: 1200,
+      },
+    },
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "repulse",
+      },
+      onclick: {
+        enable: true,
+        mode: "push",
+      },
+      resize: true,
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        line_linked: {
+          opacity: 1,
+        },
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3,
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4,
+      },
+      push: {
+        particles_nb: 4,
+      },
+      remove: {
+        particles_nb: 2,
+      },
+    },
+  },
+  retina_detect: true,
+};
+
+let currentConfig = particleOneConfig;
+let currentParticle = "One";
+
+function initializeParticles() {
+  particlesJS("particles-js", currentConfig);
+}
+
+document
+  .getElementById("toggle-particles")
+  .addEventListener("click", function () {
+    currentConfig =
+      currentConfig === particleOneConfig
+        ? particleTwoConfig
+        : particleOneConfig;
+    currentParticle = currentParticle === "One" ? "Two" : "One";
+    particlesJS("particles-js", currentConfig);
+    document.getElementById(
+      "toggle-particles"
+    ).innerText = `Interactive Particle Pattern ${currentParticle}`;
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Hide the splash screen after the page has loaded
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      const splashScreen = document.getElementById("splash-screen");
+      splashScreen.style.opacity = 0;
+      setTimeout(() => {
+        splashScreen.style.display = "none";
+        document.body.classList.remove("loading");
+        // Initialize particles after splash screen is hidden
+        initializeParticles();
+      }, 500); // Duration must match the CSS transition duration
+    }, 100); // Add a small delay to ensure the splash screen is fully rendered
+  });
+});
+
+// Update particle position based on touch/mouse movement
+function updateParticles(e) {
+  let posX, posY;
+  if (e.type === "mousemove") {
+    posX = e.clientX;
+    posY = e.clientY;
+  } else if (e.type === "touchmove") {
+    posX = e.touches[0].clientX;
+    posY = e.touches[0].clientY;
+  }
+
+  particlesJS.particles.interactivity.mouse.pos_x = posX;
+  particlesJS.particles.interactivity.mouse.pos_y = posY;
+}
+
+// Add event listeners for touch and mouse movements
+document
+  .getElementById("particles-js")
+  .addEventListener("mousemove", updateParticles);
+document
+  .getElementById("particles-js")
+  .addEventListener("touchmove", updateParticles);

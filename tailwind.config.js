@@ -12,32 +12,55 @@ module.exports = {
         paleGold: "#E6D8AC",
         lightBeige: "#F5F5DC",
         softTaupe: "#D8CFC4",
-        vibrantBlue: "#007ACC", // Replacing deep blue
-        vibrantRed: "#FF4500", // Replacing burgundy
+        deepBlue: "#003366",
+        vibrantBlue: "#007ACC",
+        burgundy: "#800020",
+        vibrantRed: "#FF4500",
         emeraldGreen: "#50C878",
         charcoalGray: "#36454F",
-        gold: "#FFD700",
+        textLight: "#F0F0F0",
+        textDark: "#0D0D0D",
+        highlightColor: "#FFD700",
+        lightColor: "#F0F0F0",
       },
       keyframes: {
-        blowUp: {
-          "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.5)" },
+        sparkle: {
+          "0%, 100%": { transform: "scale(1)", opacity: "1" },
+          "50%": { transform: "scale(1.5)", opacity: "0.7" },
         },
-        bounce: {
-          "0%, 100%, 20%, 50%, 80%": {
-            transform: "translateY(0)",
-          },
-          "40%": {
-            transform: "translateY(-30px)",
-          },
-          "60%": {
-            transform: "translateY(-15px)",
-          },
+        blowUpIcon: {
+          "0%, 100%": { transform: "scale(1)" },
+          "20%": { transform: "scale(1.5)" },
+          "40%": { transform: "scale(0.7)" },
+          "60%": { transform: "scale(1.1)" },
+          "80%": { transform: "scale(0.95)" },
+        },
+        blowUpText: {
+          "0%, 100%": { transform: "scale(1)" },
+          "20%": { transform: "scale(1.3)" },
+          "40%": { transform: "scale(0.95)" },
+          "60%": { transform: "scale(1.05)" },
+          "80%": { transform: "scale(1)" },
+        },
+        realisticBounce: {
+          "0%": { transform: "translateY(0)" },
+          "10%": { transform: "translateY(-100px)" },
+          "20%": { transform: "translateY(0)" },
+          "30%": { transform: "translateY(-50px)" },
+          "40%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-25px)" },
+          "60%": { transform: "translateY(0)" },
+          "70%": { transform: "translateY(-12.5px)" },
+          "80%": { transform: "translateY(0)" },
+          "90%": { transform: "translateY(-6.25px)" },
+          "100%": { transform: "translateY(0)" },
         },
       },
       animation: {
-        blowUp: "blowUp 1s ease-in-out infinite",
-        bounce: "bounce 1s ease-in-out infinite",
+        sparkle: "sparkle 1.5s infinite ease-in-out",
+        blowUpIcon: "blowUpIcon 0.6s forwards, realisticBounce 2s forwards",
+        blowUpText: "blowUpText 0.6s forwards",
+        realisticBounce: "realisticBounce 1s ease-in-out infinite",
       },
     },
   },
