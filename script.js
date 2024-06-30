@@ -103,6 +103,7 @@ window.onload = () => {
   });
 };
 
+// Toggle Menu
 function toggleMenu() {
   const menu = document.querySelector(".nav-menu");
   const overlay = document.querySelector(".menu-overlay");
