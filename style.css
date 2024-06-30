@@ -664,7 +664,74 @@ body.dark-mode .benefit-item p {
 
 /* Testimonials */
 
-/* Testimonial styles here */
+/* .testimonials {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+} */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-control {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.carousel-control:hover {
+  color: #f4a261;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel-indicator {
+  background: #ccc;
+  border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-indicator.current-slide {
+  background: #f4a261;
+}
+
+.carousel-indicator:hover {
+  background: #f4a261;
+}
 
 
 /* Contact Form */
