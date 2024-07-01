@@ -106,14 +106,14 @@
 
 /* General Styles */
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
   color: var(--rich-black); /* Jet Black for body text in light mode */
-  line-height: 1.8;
+  line-height: 1.5;
   overflow-x: hidden;
   background-color: var(--ivory); /* ivory for light mode */
 }
@@ -155,7 +155,7 @@ body.dark-mode #contact-form label {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin: 1.25rem 0;
   color: var(--rich-black); /* Jet Black for body text in light mode */
 }
@@ -222,7 +222,7 @@ header {
 
   .book-now.small {
     padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    font-size: 0.775rem;
   }
 }
 
@@ -393,7 +393,7 @@ body.dark-mode .theme-toggle img {
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.875rem;
   margin-top: 32px;
 }
 
@@ -404,7 +404,7 @@ body.dark-mode .theme-toggle img {
 
 .book-now.small {
   padding: 8px 16px !important;
-  font-size: 0.875rem !important;
+  font-size: 0.775rem !important;
 }
 
 body.dark-mode .service {
@@ -749,7 +749,7 @@ body.dark-mode .service .border-b {
   margin: 0 auto;
   text-align: left;
   padding: 4rem 32px 24px;
-  background-color: var(--light-beige);
+  background-color: rgba(255, 255, 240, 0.333);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(13, 13, 13, 0.1);
   display: flex;
@@ -764,7 +764,7 @@ body.dark-mode #memberships {
 }
 
 body.dark-mode .membership-benefits {
-  background-color: rgba(26, 26, 26, 0.8);
+  background-color: rgba(26, 26, 26, 0.333);
 }
 
 .benefit-item {
@@ -802,6 +802,7 @@ body.dark-mode .membership-benefits {
   font-size: 1.2rem;
   transition: transform 0.6s ease-in-out;
   color: var(--rich-black);
+  text-transform: uppercase;
 }
 
 body.dark-mode .benefit-item p {
@@ -917,7 +918,7 @@ body.dark-mode .benefit-item p {
 .background-animation::after {
   content: "";
   position: absolute;
-  background: rgba(255, 215, 0, 1); /* Light yellow shapes */
+  background: rgba(255, 215, 0, 0.666); /* Light yellow shapes */
   border-radius: 50%;
   animation: float 4s ease-in-out infinite;
 }
