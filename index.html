@@ -178,7 +178,7 @@
         <div class="service bg-white dark:bg-dark-gray p-0 rounded-lg shadow transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl flex flex-col">
           <div class="border-b border-[#CCC] dark:border-[#555]">
             <div class="overflow-hidden rounded-t-lg">
-              <img src="images/trigger-point.jpg" alt="Trigger Point"class="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-110">
+              <img src="images/trigger-point.jpg" alt="Trigger Point" class="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-110">
             </div>
           </div>
           <div class="px-6 pb-4 pt-8 text-center flex-grow">
@@ -325,7 +325,7 @@
         <img src="https://via.placeholder.com/1500x800" alt="Testimonials Background" class="background-image absolute inset-0 w-full h-full object-cover opacity-20">
         <div class="testimonials-content relative z-10">
           <div class="testimonial-item bg-white dark:bg-dark-gray p-5 rounded-lg shadow mb-5">
-            <p class="text-lg dark:text-gray-200">"The best massage therapy I've ever experienced. Truly transformative!"</p>
+            <p class="text-lg">"The best massage therapy I've ever experienced. Truly transformative!"</p>
             <p class="author font-bold text-sm mt-2 dark:text-gray-400">- Jane Doe</p>
           </div>
           <!-- Add more testimonials as needed -->
@@ -510,7 +510,7 @@
       currentConfig = (currentConfig === particleOneConfig) ? particleTwoConfig : particleOneConfig;
       currentParticle = (currentParticle === 'One') ? 'Two' : 'One';
       particlesJS('particles-js', currentConfig);
-      document.getElementById('toggle-particles').innerText = `Interactive Particle Pattern ${currentParticle}`;
+      document.getElementById('toggle-particles').innerText = 'Interactive Particle Pattern ${currentParticle}';
     });
 
     // Update particle position based on touch/mouse movement

@@ -21,7 +21,7 @@ $(document).ready(function () {
       slidesToShow: 1,
       adaptiveHeight: true,
       autoplay: true,
-      autoplaySpeed: 3000, // Adjust the speed (in milliseconds) as needed
+      autoplaySpeed: 30000, // Adjust the speed (in milliseconds) as needed
     });
   }
 });
