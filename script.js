@@ -414,3 +414,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animateOnScroll();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const createParticle = (x, y, color) => {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+    particle.style.backgroundColor = color;
+    document.querySelector(".background-animation").appendChild(particle);
+
+    setTimeout(() => {
+      particle.remove();
+    }, 5000);
+  };
+
+  const generateParticles = () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    for (let i = 0; i < 20; i++) {
+      const x = Math.random() * width;
+      const y = Math.random() * height;
+      const color =
+        x > width * 0.75 && y > height * 0.75 ? "#FFFFFF" : "#FFD700";
+      createParticle(x, y, color);
+    }
+  };
+
+  setInterval(generateParticles, 2000);
+});
