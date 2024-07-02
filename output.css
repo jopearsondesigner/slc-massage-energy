@@ -17,43 +17,45 @@
   --vibrant-red: #ff4500;
   --emerald-green: #50c878;
   --charcoal-gray: #36454f;
+  --background-color: #fffff0;
+  /*Light mode for splash screen*/
 }
 
 /***** Colors *****/
 
-/* Rich Black */
+.rich-black,
+.jet-black,
+.charcoal,
+.dark-gray,
+.ivory,
+.pale-gold,
+.light-beige,
+.soft-taupe,
+.deep-blue,
+.vibrant-blue,
+.burgundy,
+.vibrant-red,
+.emerald-green,
+.charcoal-gray {
+  color: #ffffff;
+  /* For contrast */
+}
 
 .rich-black {
   background-color: var(--rich-black);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Jet Black */
 
 .jet-black {
   background-color: var(--jet-black);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Charcoal */
 
 .charcoal {
   background-color: var(--charcoal);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Dark Gray */
 
 .dark-gray {
   background-color: var(--dark-gray);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Ivory */
 
 .ivory {
   background-color: var(--ivory);
@@ -61,15 +63,11 @@
   /* For contrast */
 }
 
-/* Pale Gold */
-
 .pale-gold {
   background-color: var(--pale-gold);
   color: var(--charcoal);
   /* For contrast */
 }
-
-/* Light Beige */
 
 .light-beige {
   background-color: var(--light-beige);
@@ -77,66 +75,40 @@
   /* For contrast */
 }
 
-/* Soft Taupe */
-
 .soft-taupe {
   background-color: var(--soft-taupe);
   color: var(--charcoal);
   /* For contrast */
 }
 
-/* Deep Blue */
-
 .deep-blue {
   background-color: var(--deep-blue);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Vibrant Blue */
 
 .vibrant-blue {
   background-color: var(--vibrant-blue);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Burgundy */
 
 .burgundy {
   background-color: var(--burgundy);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Vibrant Red */
 
 .vibrant-red {
   background-color: var(--vibrant-red);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Emerald Green */
 
 .emerald-green {
   background-color: var(--emerald-green);
-  color: #ffffff;
-  /* For contrast */
 }
-
-/* Charcoal Gray */
 
 .charcoal-gray {
   background-color: var(--charcoal-gray);
-  color: #ffffff;
-  /* For contrast */
 }
 
 /* General Styles */
 
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
@@ -144,7 +116,7 @@ body {
   margin: 0;
   color: var(--rich-black);
   /* Jet Black for body text in light mode */
-  line-height: 1.8;
+  line-height: 1.5;
   overflow-x: hidden;
   background-color: var(--ivory);
   /* ivory for light mode */
@@ -188,7 +160,7 @@ body.dark-mode #contact-form label {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin: 1.25rem 0;
   color: var(--rich-black);
   /* Jet Black for body text in light mode */
@@ -259,7 +231,7 @@ header {
 
   .book-now.small {
     padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    font-size: 0.775rem;
   }
 }
 
@@ -398,16 +370,6 @@ body.dark-mode .theme-toggle img {
   display: block;
 }
 
-.social-btn {
-  background-color: rgba(13, 13, 13, 0.5);
-  transition: background-color 0.3s ease;
-  margin-bottom: 0;
-}
-
-.social-btn:hover {
-  background-color: rgba(13, 13, 13, 0.8);
-}
-
 .social-media a {
   display: flex;
   align-items: center;
@@ -432,7 +394,7 @@ body.dark-mode .theme-toggle img {
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.875rem;
   margin-top: 32px;
 }
 
@@ -443,7 +405,7 @@ body.dark-mode .theme-toggle img {
 
 .book-now.small {
   padding: 8px 16px !important;
-  font-size: 0.875rem !important;
+  font-size: 0.775rem !important;
 }
 
 body.dark-mode .service {
@@ -811,14 +773,14 @@ body.dark-mode .service .border-b {
   margin: 0 auto;
   text-align: left;
   padding: 4rem 32px 24px;
-  background-color: var(--light-beige);
+  background-color: rgba(255, 255, 240, 0.333);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(13, 13, 13, 0.1);
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 10;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 body.dark-mode #memberships {
@@ -827,13 +789,7 @@ body.dark-mode #memberships {
 }
 
 body.dark-mode .membership-benefits {
-  background-color: rgba(26, 26, 26, 0.8);
-}
-
-.benefit-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+  background-color: rgba(26, 26, 26, 0.333);
 }
 
 .staggered.right {
@@ -847,12 +803,13 @@ body.dark-mode .membership-benefits {
 .icon-text-group {
   display: flex;
   align-items: center;
+  gap: 21px;
+  /* Adjust this value to set equal spacing between icon and text */
   transition: transform 0.3s ease-in-out;
 }
 
 .benefit-icon {
   font-size: 2em;
-  margin-right: 12px;
   transition: transform 0.6s ease-in-out;
 }
 
@@ -861,10 +818,26 @@ body.dark-mode .membership-benefits {
   max-width: 100%;
 }
 
+.benefit-item {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.5s ease-in-out;
+}
+
+.benefit-item.right {
+  transform: translateX(50px);
+}
+
+.benefit-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .benefit-item p {
   font-size: 1.2rem;
   transition: transform 0.6s ease-in-out;
   color: var(--rich-black);
+  text-transform: uppercase;
 }
 
 body.dark-mode .benefit-item p {
@@ -963,24 +936,39 @@ body.dark-mode .benefit-item p {
   }
 }
 
-.benefit-item:hover .benefit-icon {
+.animate-blowUpIcon {
   animation: blowUpIcon 0.6s forwards, realisticBounce 2s forwards;
 }
 
-.benefit-item:hover p {
+.animate-blowUpText {
   animation: blowUpText 0.6s forwards;
 }
 
 /* Background Animation */
 
-.background-animation {
+.background-animation::before,
+.background-animation::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
+  background: rgba(80, 200, 120, 0.666);
+  /* Light green shapes */
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.background-animation::before {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 20%;
+}
+
+.background-animation::after {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  right: 20%;
+  animation-duration: 10s;
 }
 
 @keyframes float {
@@ -997,29 +985,30 @@ body.dark-mode .benefit-item p {
   }
 }
 
-.background-animation::before,
-.background-animation::after {
-  content: "";
+/* Additional subtle animated shapes */
+
+.background-animation span {
   position: absolute;
-  background: rgba(255, 215, 0, 1);
+  display: block;
+  background: rgba(255, 215, 0, 0.3);
   /* Light yellow shapes */
   border-radius: 50%;
-  animation: float 4s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
-.background-animation::before {
-  width: 200px;
-  height: 200px;
-  top: 10%;
-  left: 20%;
+.background-animation span:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  top: 25%;
+  left: 35%;
 }
 
-.background-animation::after {
-  width: 150px;
-  height: 150px;
-  bottom: 10%;
-  right: 20%;
-  animation-duration: 6s;
+.background-animation span:nth-child(2) {
+  width: 90px;
+  height: 90px;
+  bottom: 20%;
+  right: 15%;
+  animation-duration: 9s;
 }
 
 /***** Contact Form *****/
@@ -1288,15 +1277,6 @@ footer {
 }
 
 /* Slick Carousel overrides */
-
-.slick-dots li button:before {
-  color: #ffd700;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  color: #ffd700;
-}
 
 .slick-dots li button:before {
   color: #ffd700;

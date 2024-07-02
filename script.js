@@ -375,3 +375,42 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Applied random color to benefit item:", randomColor);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const benefitItems = document.querySelectorAll(".benefit-item");
+
+  const animateOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.8;
+
+    benefitItems.forEach((item) => {
+      const itemTop = item.getBoundingClientRect().top;
+
+      if (itemTop < triggerBottom) {
+        item.classList.add("show");
+        const icon = item.querySelector(".benefit-icon");
+        const text = item.querySelector("p");
+
+        if (icon && text) {
+          icon.classList.add("animate-blowUpIcon", "animate-realisticBounce");
+          text.classList.add("animate-blowUpText");
+        }
+      } else {
+        item.classList.remove("show");
+        const icon = item.querySelector(".benefit-icon");
+        const text = item.querySelector("p");
+
+        if (icon && text) {
+          icon.classList.remove(
+            "animate-blowUpIcon",
+            "animate-realisticBounce"
+          );
+          text.classList.remove("animate-blowUpText");
+        }
+      }
+    });
+  };
+
+  window.addEventListener("scroll", animateOnScroll);
+
+  animateOnScroll();
+});
