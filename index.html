@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png">
+  <link rel="manifest" href="images/favicon//site.webmanifest">
 </head>
 
 <body class="loading dark-mode text-gray-200">
@@ -44,13 +48,13 @@
     </nav>
     <div class="menu-overlay hidden fixed inset-0 bg-black bg-opacity-50 z-10" onclick="toggleMenu()"></div>
     <ul class="nav-menu fixed top-0 right-[-100%] h-full w-64 bg-rich-black bg-opacity-90 flex flex-col justify-center items-center transition-all duration-300 z-10">
-      <li class="my-5"><a href="/" class="text-yellow-600 hover:text-yellow-700">Home</a></li>
-      <li class="my-5"><a href="#about" class="text-yellow-600 hover:text-yellow-700">About</a></li>
-      <li class="my-5"><a href="/blog" class="text-yellow-600 hover:text-yellow-700">Blog</a></li>
-      <li class="my-5"><a href="#services" class="text-yellow-600 hover:text-yellow-700">Services</a></li>
-      <li class="my-5"><a href="#memberships" class="text-yellow-600 hover:text-yellow-700">Memberships</a></li>
-      <li class="my-5"><a href="#contact" class="text-yellow-600 hover:text-yellow-700">Contact</a></li>
-      <li class="my-5"><a href="#book-now" class="book-now small text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-4 py-2 rounded shadow-inner transition-transform transform hover:-translate-y-0.5">Book Now</a></li>
+        <li class="my-5"><a href="/" class="text-yellow-600 hover:text-yellow-700">Home</a></li>
+        <li class="my-5"><a href="#about" class="text-yellow-600 hover:text-yellow-700">About</a></li>
+        <li class="my-5"><a href="blog.html" class="text-yellow-600 hover:text-yellow-700">Blog</a></li>
+        <li class="my-5"><a href="#services" class="text-yellow-600 hover:text-yellow-700">Services</a></li>
+        <li class="my-5"><a href="#memberships" class="text-yellow-600 hover:text-yellow-700">Memberships</a></li>
+        <li class="my-5"><a href="#contact" class="text-yellow-600 hover:text-yellow-700">Contact</a></li>
+        <li class="my-5"><a href="#book-now" class="book-now small text-white bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 px-4 py-2 rounded shadow-inner transition-transform transform hover:-translate-y-0.5">Book Now</a></li>
     </ul>
   </header>
 
@@ -354,13 +358,18 @@
   <footer class="bg-rich-black text-white p-5 text-center">
     <p class="text-sm">&copy; 2024 SLC Massage & Energy</p>
   </footer>
-
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const blogLink = document.getElementById('blog-link');
+        const currentPath = window.location.pathname.split('/').slice(0, -1).join('/');
+        blogLink.href = `${currentPath}/blog.html`;
+    });
+</script>
 </body>
 
 </html>
