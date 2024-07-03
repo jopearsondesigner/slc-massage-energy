@@ -23,6 +23,16 @@ module.exports = {
         highlightColor: "#FFD700",
         lightColor: "#F0F0F0",
       },
+      fontSize: {
+        h1: ["2.5rem", "1.25"],
+        h2: ["2rem", "1.25"],
+        h3: ["1.75rem", "1.25"],
+        h4: ["1.5rem", "1.25"],
+        h5: ["1.25rem", "1.25"],
+        h6: ["1rem", "1.25"],
+        p: ["1rem", "1.5"],
+        small: ["0.875rem", "1.5"],
+      },
       keyframes: {
         sparkle: {
           "0%, 100%": { transform: "scale(1)", opacity: "1" },

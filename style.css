@@ -85,14 +85,14 @@
 
 /* General Styles */
 html {
-  font-size: 16px;
+  font-size: 16px !important;
+  line-height: 1.5;
 }
 
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
   color: var(--rich-black); /* Jet Black for body text in light mode */
-  line-height: 1.5;
   overflow-x: hidden;
   background-color: var(--ivory); /* ivory for light mode */
 }
@@ -116,16 +116,47 @@ body.dark-mode a:hover {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: "Playfair Display", serif;
   text-align: center;
   line-height: 1.3;
-  color: var(--charcoal);
+  font-weight: 600;
+  margin: 1.5em 0 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
 }
 
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
 body.dark-mode p,
 body.dark-mode .service h3,
 body.dark-mode .service p,
@@ -445,7 +476,7 @@ body.dark-mode #services {
 }
 
 .hero-content h2 {
-  font-size: 3.25em;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 
@@ -1112,6 +1143,10 @@ footer {
   .therapist-headshot {
     width: 160px;
     height: 160px;
+  }
+
+  .benefit-item p {
+    font-size: 1rem;
   }
 }
 
